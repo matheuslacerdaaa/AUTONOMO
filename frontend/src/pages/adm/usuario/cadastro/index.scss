@@ -1,0 +1,138 @@
+
+.cadastro {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    
+    .mae{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        animation: mov 3s ease-in-out forwards;
+        box-shadow: 2px 5px 10px rgb(117, 117, 117);
+        background-color: white;
+      
+  
+        border: 1px solid #363636;
+        border-radius: 30px;
+        width: 70vw;
+        height: 90vh;
+    
+            .imagem {
+                width: 35%;
+                height: 35vh;
+                margin-top: 250px;
+            }
+        
+            .link{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 8%;
+                margin-right: 20%;
+
+                a{
+                   margin-bottom: 3px;
+                    font-size: 100%;
+                    color: #E5B000;
+                    text-decoration: none;
+                }
+            }
+
+
+
+        .inputs {
+
+        
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            
+
+
+            hr{
+                margin-right: 80px;
+                width: 30vw;
+                color: #4F4F4F;
+            }
+            .text{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h3{
+                    margin-top: -30px;
+                }
+            }
+            label{
+                font-size: 20px;
+               
+            }
+    
+    
+            h2 {
+                font: 600 50px 'Montserrat';
+            }
+            h3{
+                font: 300 20px 'Montserrat';
+            }
+    
+            input {
+               
+                border-radius: 62px;
+                width: 30vw;
+                height: 4vh;
+                padding: 5px;
+                font: 400 14px 'lato';
+                border: 1px solid #36363650;
+                outline: none;
+                padding-left: 3%;
+       
+            }
+        }
+      
+    
+        .botao-cadastro {
+            display: flex;
+            align-items: center;
+            margin-left: 6vw;
+                button{
+                    width: 20vw;
+                    height: 5vh;
+                    border: none;
+                    border-radius: 30px;
+                    color: #000;
+                    background-color: #E5B000;
+                    font: 500 15px 'Montserrat';
+                    cursor: pointer;
+        
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+         
+            
+        }
+    
+    
+    }
+    }
+
+   
+
+@keyframes mov {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
