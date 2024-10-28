@@ -16,6 +16,7 @@ header{
         #logo{
             font-size: 130%;
             color: #e9a209;
+            z-index: 1;
             
         }
         #nav_list{
@@ -34,7 +35,7 @@ header{
         #mobile-btn{
             display: none;
         }      
-        @media screen and (max-width: 1170px) {
+        @media screen and (max-width: 900px) {
         #nav_list,
         #navbar .btn-contato
         {
@@ -49,6 +50,7 @@ header{
             background-color: transparent;
             font-size: 1.5rem;
             cursor: pointer;
+            z-index: 1;
         }
     }
     }
@@ -81,6 +83,7 @@ header{
     }
     #mobile-menu{
         display: none;
+            
     }
     #mobile-menu.active{
         display: flex;

@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
 
 
     
@@ -17,7 +18,7 @@
         background-color: white;
       
   
-        border: 1px solid #363636;
+ 
         border-radius: 30px;
         width: 70vw;
         height: 90vh;
@@ -76,10 +77,10 @@
     
     
             h2 {
-                font: 600 50px 'Montserrat';
+                font: 600 50px 'Poppins';
             }
             h3{
-                font: 300 20px 'Montserrat';
+                font: 300 20px 'Poppins';
             }
     
             input {
