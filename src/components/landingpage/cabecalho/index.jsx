@@ -8,7 +8,7 @@ export default function Cabecalho() {
         setMobilebtn(!mobilebtn);
     }
 
-    const icones = mobilebtn ? "fa-times" : "fa-bars";
+    const icones = mobilebtn ? "fa-times" : "fa-bars" ;
 
     return (
         <header>
@@ -19,7 +19,7 @@ export default function Cabecalho() {
                         <a href="#inicio">Inicio</a>
                     </li>
                     <li className="nav_item">
-                        <a href="#menu">Cardapio</a>
+                        <a href="#menu">Destaques</a>
                     </li>
                     <li className="nav_item">
                         <a href="#sobre">Sobre</a>
@@ -40,7 +40,7 @@ export default function Cabecalho() {
                         <a href="#inicio">Inicio</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#menu">Cardapio</a>
+                        <a href="#menu">Destaques</a>
                     </li>
                     <li className="nav-item">
                         <a href="#sobre">Sobre</a>
