@@ -29,7 +29,8 @@ export default function Landingpage() {
             </div>
             <div id="icones">
               <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
-              <a href=""> <i className='fa-brands fa-whatsapp'></i> </a>
+              <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+              "> <i className='fa-brands fa-whatsapp'></i> </a>
               <a href=""> <i className='fa-brands fa-facebook'></i> </a>
             </div>
           </div>
@@ -305,7 +306,8 @@ export default function Landingpage() {
 
           <div id="icones">
               <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
-              <a href=""> <i className='fa-brands fa-whatsapp'></i> </a>
+              <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+              "> <i className='fa-brands fa-whatsapp'></i> </a>
               <a href=""> <i className='fa-brands fa-facebook'></i> </a>
           </div>
         </div>

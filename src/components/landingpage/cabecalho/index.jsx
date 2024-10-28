@@ -28,7 +28,8 @@ export default function Cabecalho() {
                         <a href="#avaliar">Avaliação</a>
                     </li>
                 </ul>
-                <button className="btn-contato">Contato</button>
+                <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+                " className='btn-contato' >Contato</a>
                 <button id="mobile-btn" onClick={abrirmenu}>
                     <i className={`fa-solid ${icones}`}></i>
                 </button>
@@ -49,7 +50,8 @@ export default function Cabecalho() {
                         <a href="#avaliar">Avaliação</a>
                     </li>
                 </ul>
-                <button className="btn-contato">Contato</button>
+                <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
+                " className='btn-contato'>Contato</a>
             </div>
         </header>
     );
