@@ -65,6 +65,8 @@ export default function Landingpage() {
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
               </div>
 
               <div className="buguer-preco">
@@ -83,17 +85,19 @@ export default function Landingpage() {
                 <i className='fa-solid fa-heart'></i>
               </div>
 
-              <img src="/assets/images/landingpage/cardapio/buguer1.png" className='buguer-imagem'/>
+              <img src="/assets/images/landingpage/cardapio/buguer2.png" className='buguer-imagem'/>
 
-              <h3 className='buguer-titulo'>Cheese Fresh</h3>
+              <h3 className='buguer-titulo'>Cheddar Deluxe</h3>
 
 
               <span className='buguer-descricao'>
-      
-                Carne, queijo derretido, tomate fresco e salada de alface.
+
+                Duas Carne, cheddar, bacon, alface, tomate, cebola.
               </span>
 
               <div className="buguer-avaliacao">
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
@@ -115,16 +119,18 @@ export default function Landingpage() {
                 <i className='fa-solid fa-heart'></i>
               </div>
 
-              <img src="/assets/images/landingpage/cardapio/buguer1.png" className='buguer-imagem'/>
+              <img src="/assets/images/landingpage/cardapio/buguer3.png" className='buguer-imagem3'/>
 
               <h3 className='buguer-titulo'>Cheddar Special </h3>
 
 
               <span className='buguer-descricao'>
-              Carne, cheddar derretido, tomate fresco, cebola crocante e salada.
+              Carne, cheddar, tomate fresco, cebola, salada.
               </span>
 
               <div className="buguer-avaliacao">
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
@@ -157,8 +163,7 @@ export default function Landingpage() {
 
                   <div className="one">
                     <h1>Historia</h1>
-                    <p>Lucas sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera.
-                    Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis. </p>
+                    <p>Simone sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera. Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis. </p>
                   </div>
 
 
@@ -176,8 +181,7 @@ export default function Landingpage() {
                   
                   
                     <h1>Historia</h1>
-                    <p>Lucas sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera.
-                    Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis. </p>
+                    <p>Simone sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera. Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis.</p>
 
                 
 
@@ -259,10 +263,11 @@ export default function Landingpage() {
                             <i className='fa-solid fa-star'></i>
                             <i className='fa-solid fa-star'></i>
                             <i className='fa-solid fa-star'></i>
+                            <i className='fa-solid fa-star'></i>
                           </span>
                         </p>
 
-                        <p className='um'>Maravilhoso, sabor incrivel,alem do atendimento!!</p>
+                        <p className='um'> Hambúrgueres criativos e saborosos em um ambiente acolhedor!!</p>
                     </div>
 
                 </div>
@@ -277,9 +282,11 @@ export default function Landingpage() {
                             <i className='fa-solid fa-star'></i>
                             <i className='fa-solid fa-star'></i>
                             <i className='fa-solid fa-star'></i>
+                            <i className='fa-solid fa-star'></i>
                           </span>
                         </p>
-                        <p className='dois'>Tudo perfeito, adorei o atendimento, alem do hambuguer!!</p>
+                        <p className='dois'>
+                        Sabores únicos de hambúrgueres em um espaço aconchegante.</p>
                     </div>
                 </div>
                
