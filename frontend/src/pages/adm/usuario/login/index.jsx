@@ -25,7 +25,7 @@ export default function Login() {
     } else {
         localStorage.setItem('USUARIO', resp.data.token)
         toast.success('Entrou')
-        navigate('/Teste')
+        navigate('/admpage')
     }
     
 }
@@ -63,16 +63,10 @@ export default function Login() {
           </div>
 
           <div className="inf">
-              <div className="check">
-
-              <input type="checkbox" />
-              <label htmlFor="">Lembre-me</label>
-              </div>
+         
             
 
-              <div className="link-cadastro">
-              <a href=""><Link to='/cadastro'>Esqueceu a senha?</Link></a>
-              </div>
+            
 
           </div>
 

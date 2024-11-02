@@ -1,0 +1,237 @@
+.mae {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+
+  .homepage{
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    
+
+    header{ 
+      display: flex;
+      justify-content: space-around;
+  
+      
+    .sair{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 25vh;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin-top: 20%;
+        background-color: rgb(0, 0, 0);
+        color: #ffffff;
+        border-radius: 30px ;
+        
+        
+        button{
+            width: 20%;
+            height: 5vh;
+            border: none;
+            border-radius: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .sim{
+            background-color: #e5b000;
+            color: #ffffff;
+            
+            a{
+              text-decoration: none;
+              color: #ffffff;
+            }
+        }
+            .nao{
+            background-color: #ffffff;
+            color: #000000;
+
+            a{
+              text-decoration: none;
+              color: #000000;
+            }
+        }
+    }
+
+    .text{
+      display: flex;
+      flex-direction: column;
+      margin-right: 50%;
+      width: 70vw;
+      flex-wrap: wrap;
+      
+
+      h1{
+        font-size: 40px;
+        font-family: 'Arial' 500;  
+        margin-bottom: 20%;
+      }
+      p{
+        
+        width: 150%;
+        font-family: 'Arial' 100;   
+        flex-wrap: nowrap;
+      }
+    }
+
+     .ilustracao{
+      width: 50%;
+      height: 10vh;
+      padding: 10px;
+     
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #000000;
+      border-radius: 80px;
+      
+      .text1{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 15% ;
+
+        h3{
+          font-family: 'Arial' 300;
+        }
+        p{
+          font-family: 'Arial' 100;
+          margin-top: 5px;
+        }
+      
+      }
+     }
+    }
+  }
+
+
+  .menu {
+    background-color: #000000;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    transition: width 0.2s ease;
+    height: 100vh;
+    align-items: center;
+
+    .expandir {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 20px;
+
+      #logo {
+        font-size: 130%;
+        color: #e9a209;
+        z-index: 1;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20vh;
+      }
+    }
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .menu-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .expandir {
+      margin-top: 8vh;
+    }
+  }
+
+  .menu-content a {
+    color: #fff;
+    width: 12vw;
+    height: 5vh;
+    text-decoration: none;
+    margin: 8px;
+    transition: opacity 0.8s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20%;
+    border-radius: 15px;
+
+    img {
+      width: 30px;
+      margin: 10px;
+    }
+  }
+
+  .menu-content a:hover {
+    opacity: 0.9;
+  }
+
+  .menu-content a:focus {
+    background-color: #e5b000;
+  }
+
+  .menu-fechado .menu-content a {
+    justify-content: center;
+  }
+
+  .menu-content img {
+    margin-right: 10px;
+    transition: margin 0.3s ease;
+  }
+
+  .menu-fechado .menu-content a {
+    width: 3vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-right: 50%;
+    margin-top: 80%;
+  }
+  .menu-fechado .menu-content .left {
+    margin-top: 12vh;
+  }
+
+  .menu-content span {
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-fechado .menu-content .expandir #logo {
+    display: none;
+  }
+  .menu-fechado .menu-content span {
+    display: none;
+  }
+
+  .menu-content .left {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+  }
+}

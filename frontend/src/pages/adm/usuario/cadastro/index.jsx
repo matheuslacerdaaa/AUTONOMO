@@ -34,7 +34,7 @@ export default function Cadastro() {
             else {
                 const url = `http://localhost:3069/usuario?x-access-token=${token}`;
                 let resp = await axios.post(url, paramsCorpo);
-                toast.success('Cadastrado Id: ' + resp.data.id);}
+                toast.success('Cadastrado Id: ' + resp.data.novoId);}
         } 
     }
 
@@ -109,7 +109,7 @@ export default function Cadastro() {
                     />
 
                     <div className="link">
-                        <h3>Já tem conta? Faça  <a href=""><Link to='/'>Login</Link></a></h3>
+                        <h3>Já tem conta? Faça  <a href=""><Link to='/login '>Login</Link></a></h3>
 
                     </div>
 
