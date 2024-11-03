@@ -28,10 +28,10 @@ export default function Landingpage() {
               <a href="#menu" className='btn-contato'>Cardapio</a>
             </div>
             <div id="icones">
-              <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
+              <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <p className='fa-brands fa-instagram'></p> </a>
               <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
-              "> <i className='fa-brands fa-whatsapp'></i> </a>
-              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <i className='fa-brands fa-facebook'></i> </a>
+              "> <p className='fa-brands fa-whatsapp'></p> </a>
+              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <p className='fa-brands fa-facebook'></p> </a>
             </div>
           </div>
           <div id="banner">
@@ -49,7 +49,7 @@ export default function Landingpage() {
             <div id="buguer">
 
               <div className="icone">
-                <i className='fa-solid fa-heart'></i>
+              <p className='fa-solid fa-heart'></p>
               </div>
 
               <img src="/assets/images/landingpage/cardapio/buguer1.png" className='buguer-imagem'/>
@@ -62,11 +62,12 @@ export default function Landingpage() {
               </span>
 
               <div className="buguer-avaliacao">
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+              
               </div>
 
               <div className="buguer-preco">
@@ -82,7 +83,7 @@ export default function Landingpage() {
             <div id="buguer">
 
               <div className="icone">
-                <i className='fa-solid fa-heart'></i>
+              <p className='fa-solid fa-heart'></p>
               </div>
 
               <img src="/assets/images/landingpage/cardapio/buguer2.png" className='buguer-imagem'/>
@@ -96,11 +97,11 @@ export default function Landingpage() {
               </span>
 
               <div className="buguer-avaliacao">
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
+                <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
               </div>
 
               <div className="buguer-preco">
@@ -116,7 +117,7 @@ export default function Landingpage() {
             <div id="buguer">
 
               <div className="icone">
-                <i className='fa-solid fa-heart'></i>
+                <p className='fa-solid fa-heart'></p>
               </div>
 
               <img id='buguer3'  src="/assets/images/landingpage/cardapio/buguer3.png" className='buguer-imagem'/>
@@ -129,11 +130,11 @@ export default function Landingpage() {
               </span>
 
               <div className="buguer-avaliacao">
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
-                  <i className='fa-solid fa-star'></i>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
+                  <p className='fa-solid fa-star'></p>
               </div>
 
               <div className="buguer-preco">
@@ -307,14 +308,14 @@ export default function Landingpage() {
         <div id="footer_item">
 
           <span id="copyright">
-              &copy 2024 Matheus Lacerda
+              &copy 2024 Sky Blue
           </span>
 
           <div id="icones">
-              <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
+              <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <p className='fa-brands fa-instagram'></p> </a>
               <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
-              "> <i className='fa-brands fa-whatsapp'></i> </a>
-              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <i className='fa-brands fa-facebook'></i> </a>
+              "> <p className='fa-brands fa-whatsapp'></p> </a>
+              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <p className='fa-brands fa-facebook'></p> </a>
           </div>
         </div>
 
