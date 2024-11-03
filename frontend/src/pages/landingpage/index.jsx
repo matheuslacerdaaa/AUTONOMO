@@ -31,7 +31,7 @@ export default function Landingpage() {
               <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
               <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
               "> <i className='fa-brands fa-whatsapp'></i> </a>
-              <a href=""> <i className='fa-brands fa-facebook'></i> </a>
+              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <i className='fa-brands fa-facebook'></i> </a>
             </div>
           </div>
           <div id="banner">
@@ -42,7 +42,7 @@ export default function Landingpage() {
 
         <section id='menu'>
 
-          <h2 className='section-titulo'>Cardápio</h2>
+          <h2 className='section-titulo'>Destaques</h2>
           <h3 className='section-subtitulo'>Os mais pedidos</h3>
 
           <div id="buguers">
@@ -58,10 +58,12 @@ export default function Landingpage() {
 
 
               <span className='buguer-descricao'>
-               Carne, cheddar derretido, bacon crocante e salada de alface, tomate.
+               Carne, cheddar, bacon e salada de alface, tomate.
               </span>
 
               <div className="buguer-avaliacao">
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
@@ -70,7 +72,7 @@ export default function Landingpage() {
               <div className="buguer-preco">
                 <h4>R$39,99</h4>
 
-                <button className='btn-contato'>Contato</button>
+                <button className='btn-contato'><a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Contato</a></button>
               </div>
 
 
@@ -83,17 +85,19 @@ export default function Landingpage() {
                 <i className='fa-solid fa-heart'></i>
               </div>
 
-              <img src="/assets/images/landingpage/cardapio/buguer1.png" className='buguer-imagem'/>
+              <img src="/assets/images/landingpage/cardapio/buguer2.png" className='buguer-imagem'/>
 
               <h3 className='buguer-titulo'>Cheese Fresh</h3>
 
 
               <span className='buguer-descricao'>
       
-                Carne, queijo derretido, tomate fresco e salada de alface.
+                Duas carne, queijo, Bacon, tomate e salada de alface.
               </span>
 
               <div className="buguer-avaliacao">
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
@@ -102,7 +106,7 @@ export default function Landingpage() {
               <div className="buguer-preco">
                 <h4>R$29,99</h4>
 
-                <button className='btn-contato'>Contato</button>
+                <button className='btn-contato'><a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Contato</a></button>
               </div>
 
 
@@ -115,16 +119,18 @@ export default function Landingpage() {
                 <i className='fa-solid fa-heart'></i>
               </div>
 
-              <img src="/assets/images/landingpage/cardapio/buguer1.png" className='buguer-imagem'/>
+              <img id='buguer3'  src="/assets/images/landingpage/cardapio/buguer3.png" className='buguer-imagem'/>
 
-              <h3 className='buguer-titulo'>Cheddar Special </h3>
+              <h3 className='buguer-titulo'>Fresh Deluxe</h3>
 
 
               <span className='buguer-descricao'>
-              Carne, cheddar derretido, tomate fresco, cebola crocante e salada.
+              Carne, queijo, tomate, cebola alface, salada.
               </span>
 
               <div className="buguer-avaliacao">
+                  <i className='fa-solid fa-star'></i>
+                  <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
                   <i className='fa-solid fa-star'></i>
@@ -133,7 +139,7 @@ export default function Landingpage() {
               <div className="buguer-preco">
                 <h4>R$34,99</h4>
 
-                <button className='btn-contato'>Contato</button>
+                <button className='btn-contato'><a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">Contato</a></button>
               </div>
 
 
@@ -157,8 +163,7 @@ export default function Landingpage() {
 
                   <div className="one">
                     <h1>Historia</h1>
-                    <p>Lucas sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera.
-                    Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis. </p>
+                    <p>Simone sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera. Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis.</p>
                   </div>
 
 
@@ -176,7 +181,7 @@ export default function Landingpage() {
                   
                   
                     <h1>Historia</h1>
-                    <p>Lucas sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera.
+                    <p>Simone sempre foi apaixonado por cozinhar e decidiu criar o hambúrguer perfeito. Assim nasceu a Best's Burguer. No início, foi difícil, mas ele logo percebeu que o segredo estava em usar ingredientes frescos e locais. Seus hambúrgueres criativos, como o de queijo de cabra com geleia de pimenta, conquistaram a galera.
                     Hoje, a Best's Burguer é um ponto de encontro onde amigos se reúnem para compartilhar risadas e saborear hambúrgueres incríveis. </p>
 
                 
@@ -262,7 +267,7 @@ export default function Landingpage() {
                           </span>
                         </p>
 
-                        <p className='um'>Maravilhoso, sabor incrivel,alem do atendimento!!</p>
+                        <p className='um'>Lugar incrível com hambúrgueres com um ambiente acolhedor.</p>
                     </div>
 
                 </div>
@@ -279,7 +284,8 @@ export default function Landingpage() {
                             <i className='fa-solid fa-star'></i>
                           </span>
                         </p>
-                        <p className='dois'>Tudo perfeito, adorei o atendimento, alem do hambuguer!!</p>
+                        <p className='dois'>
+                        Tudo excelente, adorei o atendimento e, principalmente, o hambúrguer!</p>
                     </div>
                 </div>
                
@@ -308,7 +314,7 @@ export default function Landingpage() {
               <a href="https://www.instagram.com/_bestburgers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <i className='fa-brands fa-instagram'></i> </a>
               <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
               "> <i className='fa-brands fa-whatsapp'></i> </a>
-              <a href=""> <i className='fa-brands fa-facebook'></i> </a>
+              <a href="https://www.facebook.com/lanchesda.BestBurguer?locale=pt_BR"> <i className='fa-brands fa-facebook'></i> </a>
           </div>
         </div>
 

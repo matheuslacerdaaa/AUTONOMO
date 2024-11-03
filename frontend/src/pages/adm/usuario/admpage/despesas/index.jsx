@@ -105,7 +105,7 @@ export default function Despesas() {
         <div className="dados-c1-despesas">
             <p>15:00</p>
             <p>90.0</p>
-            <p>Pagamento de Conta</p>
+            <p>Pagamento</p>
             <p>Aluguel</p>
             <p>Andrade</p>
             <p>Dinheiro</p>

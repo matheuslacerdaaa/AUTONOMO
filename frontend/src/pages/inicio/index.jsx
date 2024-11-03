@@ -9,29 +9,32 @@ export default function Menu() {
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
 
+
+  const numero = 500
+
   const data = [
     {
       name: '1° Semana',
-      Vendas: 4000,
-      Despesas: 2400,
+      Vendas: numero,
+      Despesas: 500,
       amt: 2400,
     },
     {
       name: '2° Semana',
-      Vendas: 3000,
-      Despesas: 1398,
+      Vendas: 400,
+      Despesas: 300,
       amt: 2210,
     },
     {
       name: '3° Semana',
-      Vendas: 2000,
-      Despesas: 2800,
+      Vendas: 600,
+      Despesas: 500,
       amt: 2290,
     },
     {
       name: '4° Semana',
-      Vendas: 2780,
-      Despesas: 2908,
+      Vendas: 300,
+      Despesas: 500,
       amt: 2000,
     }];
   
@@ -135,7 +138,7 @@ export default function Menu() {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis  domain={[0, 700]}/>
           <Tooltip />
           <Legend />
           <Bar dataKey="Despesas" fill="#000000" activeBar={<Rectangle fill="#323232" stroke="gray" />} />
