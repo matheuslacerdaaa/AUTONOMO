@@ -87,31 +87,6 @@ export default function Vendas() {
 
       </header>
 
-      <div className="segmentos">
-
-        <button> ＋  Add. Vendas</button>
-      </div>
-
-      <div className="table">
-        <header>
-        <h1>Horario</h1>
-        <h1>Preço</h1>
-        <h1>Produto</h1>
-        <h1>Quantidade</h1>
-        <h1>Cliente</h1>
-        <h1>Vendedor</h1>
-        </header>
-
-        <div className="dados-c1">
-            <p>22:00</p>
-            <p>40.0</p>
-            <p>X-burguer</p>
-            <p>3</p>
-            <p>Matheus Lacerda</p>
-            <p>Miguel Ferreira</p>
-        </div>
-       
-      </div>
       
     </section>
     </div>

@@ -84,33 +84,6 @@ export default function Despesas() {
     
         </div>
       
-
-   
-
-        <div className="segmentos-despesas">
-        <button id="botao-add"> ＋  Add. Vendas</button>
-        
-      </div>
-        
-      <div className="table-despesas">
-        <header>
-            <h1>Horario</h1>
-            <h1>Preço</h1>
-            <h1>Descrição</h1>
-            <h1>Categoria</h1>
-            <h1>Responsavel</h1>
-            <h1>Pagamento</h1>
-        </header>
-
-        <div className="dados-c1-despesas">
-            <p>15:00</p>
-            <p>90.0</p>
-            <p>Pagamento</p>
-            <p>Aluguel</p>
-            <p>Andrade</p>
-            <p>Dinheiro</p>
-        </div>
-    </div>
     
      
       </header>

@@ -83,32 +83,7 @@ export default function Inventario() {
         <h1>Inventario</h1>
     
         </div>
-      
-      <div className="segmentos-inventario">
-
-        <button id="botao-add"> ＋  Add. Item</button>
-      </div>
-
-      <div className="table-inventario">
-        <header>
-        <h1>Horario</h1>
-        <h1>Preço</h1>
-        <h1>Produto</h1>
-        <h1>Quantidade</h1>
-        <h1>N.Cliente</h1>
-        <h1>Vendedor</h1>
-        </header>
-
-        <div className="dados-c1-inventario">
-            <p>22:00</p>
-            <p>40.0</p>
-            <p>X-burguer</p>
-            <p>3</p>
-            <p>Matheus Lacerda</p>
-            <p>Miguel Ferreira</p>
-        </div>
-       
-      </div>
+ 
       </header>
       
     </section>

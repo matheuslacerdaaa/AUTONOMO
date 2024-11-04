@@ -2,41 +2,12 @@ import { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import "./index.scss";
 import { Link } from 'react-router-dom';
-import React, { PureComponent } from 'react';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import Example from "../adm/usuario/grafico";
 
 export default function Menu() {
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
 
-
-  const numero = 500
-
-  const data = [
-    {
-      name: '1° Semana',
-      Vendas: numero,
-      Despesas: 500,
-      amt: 2400,
-    },
-    {
-      name: '2° Semana',
-      Vendas: 400,
-      Despesas: 300,
-      amt: 2210,
-    },
-    {
-      name: '3° Semana',
-      Vendas: 600,
-      Despesas: 500,
-      amt: 2290,
-    },
-    {
-      name: '4° Semana',
-      Vendas: 300,
-      Despesas: 500,
-      amt: 2000,
-    }];
   
   const ativarClick = (index) => {
     setAtivar(index);
@@ -124,27 +95,7 @@ export default function Menu() {
 
       </header>
     
-      <ResponsiveContainer id='grafico' width="100%" height="70%">
-        <BarChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 95,
-            right: 270,
-            left: 200,
-            bottom: 0,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis  domain={[0, 700]}/>
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="Despesas" fill="#000000" activeBar={<Rectangle fill="#323232" stroke="gray" />} />
-          <Bar dataKey="Vendas" fill="#E5B000" activeBar={<Rectangle fill="#E9C240" stroke="#E5B000" />} />
-        </BarChart>
-      </ResponsiveContainer>
+     <Example/>
       
     </section>
     </div>
