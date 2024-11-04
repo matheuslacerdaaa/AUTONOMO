@@ -11,8 +11,11 @@ export default function Login() {
   const navigate = useNavigate()
   
   
+  
   async function entrar() {
-    const usuario = {
+
+    try {
+      const usuario = {
         "nome": nome,
         "senha": senha
     }
@@ -22,14 +25,111 @@ export default function Login() {
 
     if (resp.data.erro != undefined) {
         toast.error(resp.data.erro)
+        discordErro()
     } else {
         localStorage.setItem('USUARIO', resp.data.token)
         toast.success('Entrou')
         navigate('/admpage')
+        discordAcess()
     }
+    } catch (error) {
+      toast.error('ERRO NA API')
+      discordErroApi()
+    }
+    
+    
     
 }
 
+async function discordErro(mensagem) {
+  try {
+    const url = 'https://discord.com/api/webhooks/1302993329910317078/K2ea2xYdOCt3D13K_6_v9rvCGPiX9mp3j9PT5yg5iAHJ1ux762o2Z_PsSPovYg9D_vfj';
+    const data = {
+      content: `Acesso a ADM`,
+      username: 'BOT ADM',
+      avatar_url: 'https://forbes.com.br/wp-content/uploads/2021/07/tech-ataqueciber-08072021-bill-hinton-getty.jpg',
+      embeds: [
+          {
+              title: 'Erro',
+              description: mensagem,
+              color: '16711680'
+             
+          }    
+      ]
+  }
+  await fetch(url,
+    { 
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }
+)
+  } catch (error) {
+    alert('erro!!!!')
+  }  
+  
+  
+}
+async function discordErroApi(mensagem) {
+  try {
+    const url = 'https://discord.com/api/webhooks/1302993329910317078/K2ea2xYdOCt3D13K_6_v9rvCGPiX9mp3j9PT5yg5iAHJ1ux762o2Z_PsSPovYg9D_vfj';
+    const data = {
+      content: `Acesso a ADM`,
+      username: 'BOT ADM',
+      avatar_url: 'https://forbes.com.br/wp-content/uploads/2021/07/tech-ataqueciber-08072021-bill-hinton-getty.jpg',
+      embeds: [
+          {
+              title: 'Erro na API',
+              description: mensagem,
+              color: '16711680'
+             
+          }    
+      ]
+  }
+  await fetch(url,
+    { 
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }
+)
+  } catch (error) {
+    alert('erro!!!!')
+  }  
+  
+  
+}
+
+
+
+async function discordAcess(mensagem) {
+  try {
+    const url = 'https://discord.com/api/webhooks/1302993329910317078/K2ea2xYdOCt3D13K_6_v9rvCGPiX9mp3j9PT5yg5iAHJ1ux762o2Z_PsSPovYg9D_vfj';
+    const data = {
+      content: `Acesso a ADM`,
+      username: 'BOT ADM',
+      avatar_url: 'https://forbes.com.br/wp-content/uploads/2021/07/tech-ataqueciber-08072021-bill-hinton-getty.jpg',
+      embeds: [
+          {
+              title: 'Acessou!',
+              description: mensagem,
+              color: '65280'
+          }    
+      ]
+  }
+  await fetch(url,
+    { 
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }
+)
+  } catch (error) {
+    alert('erro!!!!')
+  }  
+  
+  
+}
   
   
   

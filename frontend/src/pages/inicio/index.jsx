@@ -94,8 +94,8 @@ export default function Menu() {
 
 
       </header>
-    
-     <Example/>
+       
+         <Example/>
       
     </section>
     </div>
