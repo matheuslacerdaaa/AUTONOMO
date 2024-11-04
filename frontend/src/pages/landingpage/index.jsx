@@ -258,7 +258,7 @@ export default function Landingpage() {
 
                     <div className="feedback-conteudo">
 
-                        <p>
+                        <p className='nome'>
                           Matheus Lacerda
                           <span>
                             <i className='fa-solid fa-star'></i>
@@ -276,7 +276,7 @@ export default function Landingpage() {
                 <div className="feedbeck">
                   <img src="/assets/images/landingpage/avaliacao/perfil.png" className='feedback-perfil' />
                     <div className="feedback-conteudo">
-                        <p>
+                        <p className='nome'>
                           Rafael Andrade
                           <span>
                             <i className='fa-solid fa-star'></i>

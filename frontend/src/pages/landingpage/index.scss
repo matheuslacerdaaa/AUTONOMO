@@ -874,15 +874,23 @@ display: none;
 
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 560px) {
   i{
 
     display: none;
   }
 
-  p{
+  .nome{
 
     text-align: center;
+    color: #000;
+
+  }
+
+  .feedback-perfil{
+
+    display: none;
+
 
   }
 
