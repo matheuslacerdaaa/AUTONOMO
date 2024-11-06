@@ -18,7 +18,7 @@ export default function Inventario() {
   const toggleMenu = () => setExpandir(!expandir);
 
 
-  async function buscar() {
+   async function buscar() {
     const url = 'http://localhost:3069/inventario';
     let resp = await axios.get(url);
     setInventario(resp.data);

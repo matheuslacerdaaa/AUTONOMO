@@ -1,10 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
-
-const data = [
-  { name: 'Vendas', value: 500 },
-  { name: 'Despesas', value: 600 }
-];
+import axios from 'axios';
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -52,37 +48,55 @@ const renderActiveShape = (props) => {
   );
 };
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-active-shape-y93si';
+const Example = () => {
+  
+  const [data, setData] = useState([
+    { "name": "Vendas", "value": 500 },
+    { "name": "Despesas", "value": 600 }
+  ]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  state = {
-    activeIndex: 0,
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log("Fetching data...");
+        const response = await axios.get('http://localhost:3069/totalvendas');
+        console.log("Data fetched:", response.data); 
+      } catch (error) {
+        console.error('Erro ao buscar dados da API:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const onPieEnter = (_, index) => {
+    setActiveIndex(index);
   };
+  if (data.length === 0) {
 
-  onPieEnter = (_, index) => {
-    this.setState({
-      activeIndex: index,
-    });
-  };
-
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="50%">
-        <PieChart width={400} height={400}>
-          <Pie
-            activeIndex={this.state.activeIndex}
-            activeShape={renderActiveShape}
-            data={data}
-            cx="50%"
-            cy="50%"
-            innerRadius={60}
-            outerRadius={80}
-            fill="#E5B000"
-            dataKey="value"
-            onMouseEnter={this.onPieEnter}
-          />
-        </PieChart>
-      </ResponsiveContainer>
-    );
+    return <p>Carregando dados....</p>; 
   }
-}
+
+  return (
+    <ResponsiveContainer width="100%" height="50%">
+      <PieChart width={400} height={400}>
+        <Pie
+          activeIndex={activeIndex}
+          activeShape={renderActiveShape}
+          data={data}
+          cx="50%"
+          cy="50%"
+          innerRadius={60}
+          outerRadius={80}
+          fill="#E5B000"
+          dataKey="value"
+          onMouseEnter={onPieEnter}
+        />
+      </PieChart>
+    </ResponsiveContainer>
+  );
+};
+
+export default Example;
