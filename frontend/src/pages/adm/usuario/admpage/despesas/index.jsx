@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import "./despesas.scss";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function Despesas() {
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
+  const[despesas, setDespesas] = useState([])
 
   const ativarClick = (index) => {
     setAtivar(index);
@@ -17,6 +19,17 @@ export default function Despesas() {
   });
 
   const toggleMenu = () => setExpandir(!expandir);
+
+  async function buscar() {
+    const url = 'http://localhost:3069/despesas';
+    let resp = await axios.get(url);
+    setDespesas(resp.data);
+  }
+
+
+  useEffect(() => {
+    buscar();
+  }, []);
 
   return (
     <div className="mae">
@@ -82,8 +95,36 @@ export default function Despesas() {
         <div className="text">
         <h1>Despesas</h1>
     
+
+        <table>
+              <thead>
+                <tr>
+
+                  <th>Categoria</th>
+                  <th>Adicionado</th>
+                  <th>Estoque</th>
+                  <th>Validade</th>
+                  <th>Fornecedor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {despesas.map(item => 
+                  <tr key={item.id}>  
+                    <td>{new Date(item.horario).toLocaleTimeString()}</td>
+                    <td>{item.preco}</td>
+                    <td>{(item.descricao)}</td>
+                    <td>{item.categoria}</td>
+                    <td>{(item.responsavel)}</td>
+                    <td>{item.pagamento}</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
         </div>
-      
+        
+        
     
      
       </header>

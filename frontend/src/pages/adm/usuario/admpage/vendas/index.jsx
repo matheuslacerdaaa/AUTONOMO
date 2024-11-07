@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import "./vendas.scss";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function Vendas() {
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
+  const[vendas, setVendas] = useState([])
 
   const ativarClick = (index) => {
     setAtivar(index);
@@ -17,6 +19,17 @@ export default function Vendas() {
   });
 
   const toggleMenu = () => setExpandir(!expandir);
+
+  async function buscar() {
+    const url = 'http://localhost:3069/vendas';
+    let resp = await axios.get(url);
+    setVendas(resp.data);
+  }
+
+
+  useEffect(() => {
+    buscar();
+  }, []); 
 
   return (
     <div className="mae">
@@ -82,11 +95,39 @@ export default function Vendas() {
         <div className="text">
         <h1>Relatorio de Vendas</h1>
     
+
+        <table>
+              <thead>
+                <tr>
+
+                  <th>Categoria</th>
+                  <th>Adicionado</th>
+                  <th>Estoque</th>
+                  <th>Validade</th>
+                  <th>Fornecedor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {vendas.map(item => 
+                  <tr key={item.id}>  
+                    <td>{new Date(item.horario).toLocaleTimeString()}</td>
+                    <td>{item.preco}</td>
+                    <td>{(item.produto)}</td>
+                    <td>{item.quantidade}</td>
+                    <td>{(item.cliente)}</td>
+                    <td>{item.vendedor}</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
         </div>
       
 
       </header>
 
+      
       
     </section>
     </div>

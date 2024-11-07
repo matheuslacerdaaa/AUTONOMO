@@ -12,6 +12,95 @@
       padding: 0px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+
+
+    
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #0056b3;
+}
+
+
+      .btn{
+        //background-color: red;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+       // align-items: center;
+        justify-content: end;
+
+
+        button{
+          background-color: #000000;
+          color: #fff;
+          border: none;
+          border-radius: 12px;
+          height: 4vh;
+          width: 10%;
+          font-family: 'Arial', sans-serif;
+          font-size: 85%;
+          margin-right: 5%;
+          cursor: pointer;
+        }
+      }
+
+      table{
+    
+        padding: 10px;
+
+        thead{
+          th{
+            color: rgb(41, 41, 41);
+            font-size: 15px;
+          }
+        }
+        
+        tr{
+         
+          th{
+            padding: 30px;
+            
+          }
+         
+        }
+      }
       
       #cabecalho{
         width: 90%;
@@ -24,15 +113,17 @@
         display: flex;
         justify-content: space-around;
         width: 100%;
-        position: absolute;
+        
       
   
       .text{
         display: flex;
         flex-direction: column;
-        margin-right: 50%;
+        
+        //background-color: red;
         width: 70vw;
         flex-wrap: wrap;
+
         
   
         h1{
@@ -84,9 +175,10 @@
       align-items: flex-end;
       padding: 10px;
       transition: width 0.2s ease;
-      height: 100vh;
+      height: auto;
       align-items: center;
-  
+
+
       .expandir {
         display: flex;
         align-items: start;
@@ -115,12 +207,14 @@
       border: none;
       color: #fff;
       cursor: pointer;
+      
     }
   
     .menu-content {
       display: flex;
       flex-direction: row;
       justify-content: center;
+  
   
       .expandir {
         margin-top: 8vh;
