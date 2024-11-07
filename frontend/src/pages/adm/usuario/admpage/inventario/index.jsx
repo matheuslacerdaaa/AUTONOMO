@@ -170,29 +170,39 @@ export default function Inventario() {
           <div className="popup-content">
             <h2>Adicionar Itens</h2>
 
+              <div className="text">
+
+
             <label htmlFor="">Nome</label>
-            <input type="text" value={nome} onChange={e => setNome(e.target.value)} />
+            <input type="text" placeholder="digite" value={nome} onChange={e => setNome(e.target.value)} />
 
             <label htmlFor="">Categoria</label>
-            <input type="text" value={categoria} onChange={e => setCategoria(e.target.value)}/>
+            <input type="text" placeholder="digite" value={categoria} onChange={e => setCategoria(e.target.value)}/>
 
             <label htmlFor="">Data  </label>
             <input type="date" value={adicionado} onChange={e => setAdicionado(e.target.value)}/>
 
             <label htmlFor="">Qtd. Estoque</label>
-            <input type="text" value={estoque} onChange={e => setEstoque(e.target.value)}/>
+            <input type="text" placeholder="digite" value={estoque} onChange={e => setEstoque(e.target.value)}/>
 
             <label htmlFor="">Data Validade</label>
-            <input type="date" value={validade} onChange={e => setValidade(e.target.value)} />
+            <input type="date"  value={validade} onChange={e => setValidade(e.target.value)} />
 
             <label htmlFor="">Fornecedor</label>
-            <input type="text" value={fornecedor} onChange={e => setFornecedor(e.target.value)}/>
+            <input type="text" placeholder="digite" value={fornecedor} onChange={e => setFornecedor(e.target.value)}/>
 
             <label htmlFor="">Status</label>
-            <input type="text" value={status} onChange={e => setStatus(e.target.value)} />
+            <input type="text" placeholder="digite" value={status} onChange={e => setStatus(e.target.value)} />
 
-            <p className="fa-solid fa-times" onClick={closePopup}></p>
-            <button onClick={inserir}>Adicionar</button>
+
+              </div>
+
+            <div className="btn">
+              <button onClick={inserir}>Adicionar</button>
+              <button onClick={closePopup}>Fechar</button>
+            </div>
+
+
           </div>
         </div>
       )}
