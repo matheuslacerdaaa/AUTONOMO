@@ -135,8 +135,6 @@ export default function Despesas() {
         <h1>Despesas</h1>
     
         </div>
-        
-     
       </header>
 
 
