@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import "./index.scss";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Example from "../adm/usuario/grafico";
+import axios from "axios";
 
 export default function Menu() {
+
+  const navigate = useNavigate();
+
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
+  const [obj, setObj] = useState(null);
 
   
   const ativarClick = (index) => {
@@ -18,11 +23,27 @@ export default function Menu() {
     config: { tension: 250, friction: 60 },
   });
 
-  const toggleMenu = () => setExpandir(!expandir);
+  const read = async () => {
+    const x = localStorage.getItem('USUARIO');
+    if (x) {
+      const z = await axios.get(`http://localhost:3069/readToken/${JSON.parse(x).token}`); 
+      setObj(z.data)
+    } else {
+        navigate('/login');
+    }
+  }
 
 
+
+  useEffect(() => {
+    read();
+  }, []);
 
   
+
+
+  const toggleMenu = () => setExpandir(!expandir);
+
 
   return (
     <div className="mae">

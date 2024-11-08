@@ -10,6 +10,48 @@ export default function Despesas() {
   const [expandir, setExpandir] = useState(false);
   const [ativar, setAtivar] = useState(null);
   const[despesas, setDespesas] = useState([])
+  const [showPopup, setShowPopup] = useState(false);
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
+  const[horario, setHorario] = useState('')
+  const[preco, setPreco] = useState('')
+  const[descricao, setDescricao] = useState('')
+  const[categoria, setCategoria] = useState('')
+  const[responsavel, setResponsavel] = useState('')
+  const[pagamento, setPagamento] = useState('')
+  const[status, setStatus] = useState('')
+
+  async function inserir() {
+    try {
+      const params = {
+        "horario":       horario,    
+        "preco":         preco,      
+        "descricao":     descricao,
+        "categoria":     categoria,  
+        "responsavel":   responsavel,
+        "pagamento":     pagamento,  
+        "status":         status      
+      };
+  
+      const url = 'http://localhost:3069/despesas';
+      let resp = await axios.post(url, params);
+  
+      toast.success('Item adicionado! Id: ' + resp.data.novoId);
+    } catch (error) {
+      toast.error('Erro ao adicionar item!'); 
+    }
+  }
+  async function buscar() {
+    const url = 'http://localhost:3069/despesas';
+    let resp = await axios.get(url);
+    setDespesas(resp.data);
+  }
+
+
+  useEffect(() => {
+    buscar();
+  }, []);
 
   const ativarClick = (index) => {
     setAtivar(index);
@@ -84,43 +126,96 @@ export default function Despesas() {
       </animated.div>
     </div>
     <section className="homepage-despesas">
-      <header>
+      <header id="cabecalho">
         <div className="text">
         <h1>Despesas</h1>
-    
+        </div>
 
+
+        </header>
+
+        <div className="btn">
+            <button onClick={openPopup}>+ Add Item</button>
+          </div>
         <table>
+          <div className="cab-table">
               <thead>
                 <tr>
 
+                  <th>Horario</th>
+                  <th>Preco</th>
+                  <th>Descricao</th>
                   <th>Categoria</th>
-                  <th>Adicionado</th>
-                  <th>Estoque</th>
-                  <th>Validade</th>
-                  <th>Fornecedor</th>
+                  <th>Responsavel</th>
+                  <th>Pagamento</th>
                   <th>Status</th>
                 </tr>
               </thead>
-
+              </div>
+              <div className="inf-table">
               <tbody>
                 {despesas.map(item => 
                   <tr key={item.id}>  
-                    <td>{new Date(item.horario).toLocaleTimeString()}</td>
+                    <td>{item.horario}</td>
                     <td>{item.preco}</td>
                     <td>{(item.descricao)}</td>
                     <td>{item.categoria}</td>
                     <td>{(item.responsavel)}</td>
                     <td>{item.pagamento}</td>
+                    <td>{item.status}</td>
                   </tr>
                 )}
               </tbody>
+              </div>
             </table>
+            {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h2>Adicionar Itens</h2>
+
+              <div className="text">
+
+
+            <label htmlFor="">Horario</label>
+            <input type="time" placeholder="digite" value={horario} onChange={e => setHorario(e.target.value)} />
+
+            <label htmlFor="">Preço</label>
+            <input type="text" placeholder="digite" value={preco} onChange={e => setPreco(e.target.value)}/>
+
+            <label htmlFor="">Descrição  </label>
+            <input type="text" placeholder="digite" value={descricao} onChange={e => setDescricao(e.target.value)}/>
+
+            <label htmlFor="">Categoria</label>
+            <input type="text" placeholder="digite" value={categoria} onChange={e => setCategoria(e.target.value)}/>
+
+            <label htmlFor="">Responsavel</label>
+            <input type="text" placeholder="digite"  value={responsavel} onChange={e => setResponsavel(e.target.value)} />
+
+            <label htmlFor="">Pagamento</label>
+            <input type="text" placeholder="digite" value={pagamento} onChange={e => setPagamento(e.target.value)}/>
+
+            <label htmlFor="">Status</label>
+            <input type="text" placeholder="digite" value={status} onChange={e => setStatus(e.target.value)} />
+
+
+              </div>
+
+            <div className="btn">
+              <button onClick={inserir}>Adicionar</button>
+              <button onClick={closePopup}>Fechar</button>
+            </div>
+
+
+          </div>
         </div>
+      )}
+        
         
         
     
      
-      </header>
+      
+      
       
     </section>
     <Toaster/>

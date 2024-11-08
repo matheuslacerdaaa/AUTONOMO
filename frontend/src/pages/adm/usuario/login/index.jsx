@@ -20,14 +20,14 @@ export default function Login() {
         "senha": senha
     }
 
-    const url = `http://localhost:3069/entrar/`
-    let resp = await axios.post(url, usuario)
+    const url = `http://localhost:3069/entrar`
+    let resp = await axios.post(url, usuario);
 
-    if (resp.data.erro != undefined) {
+    if (resp.data.token == 'undefined') {
         toast.error(resp.data.erro)
         discordErro()
     } else {
-        localStorage.setItem('USUARIO', resp.data.token)
+        localStorage.setItem('USUARIO', JSON.stringify(resp.data));
         toast.success('Entrou')
         navigate('/admpage')
         discordAcess()
