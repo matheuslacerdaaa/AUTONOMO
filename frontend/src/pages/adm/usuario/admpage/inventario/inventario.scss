@@ -158,7 +158,8 @@
         tr{
           display: flex;
           flex-direction: row;
-        justify-content: space-around;
+          justify-content: space-around;
+
           //align-items: center;
          
           gap: 15px;
@@ -250,7 +251,7 @@
           font-family: 'Arial' 300;
         }
         p{
-          font-family: 'Arial' 100;
+          font-family: 'Arial' 100 ;
           margin-top: 5px;
         }
       
