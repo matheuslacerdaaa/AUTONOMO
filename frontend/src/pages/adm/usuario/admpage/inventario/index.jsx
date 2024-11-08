@@ -38,8 +38,7 @@ export default function Inventario() {
   
       toast.success('Item adicionado! Id: ' + resp.data.novoId);
     } catch (error) {
-      console.error('Erro ao adicionar item:', error); // Loga o erro para depuração
-      toast.error('Erro ao adicionar item!'); // Exibe um erro mais amigável para o usuário
+      toast.error('Erro ao adicionar item!'); 
     }
   }
   
@@ -138,6 +137,7 @@ export default function Inventario() {
           </div>
 
         <table>
+          <div className="cab-table">
           <thead>
             <tr>
               <th>Nome</th>
@@ -149,7 +149,8 @@ export default function Inventario() {
               <th>Status</th>
             </tr>
           </thead>
-
+          </div>
+          <div className="inf-table">
           <tbody>
             {inventario.map(item =>
               <tr key={item.id}>
@@ -163,6 +164,7 @@ export default function Inventario() {
               </tr>
             )}
           </tbody>
+          </div>
         </table>
 
         {showPopup && (

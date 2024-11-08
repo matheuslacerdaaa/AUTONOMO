@@ -78,17 +78,55 @@ export default function Ajuda() {
           </div>
         </animated.div>
       </div>
-      <section className="homepage">
+      <section className="homepage-ajuda">
         <header>
-          <div className="text">
             <h1>Ajuda</h1>
+            
+        </header>
+
+        <div className="main">
+
+
+
+
+          <div className="perguntas">
+    
+
+             <div className="text-titulo">
+
+               <h1>Principais Perguntas</h1>
+
+             </div>
+
+             <hr />
+             <div className="pergunta-one">
+                <h1>Posso devolver ou trocar um produto?</h1>
+                <p>Após a confirmação do envio, você receberá um código de rastreamento por e-mail, que pode ser utilizado no site da transportadora.</p>
+             </div>
+             
+             <hr />
+             <div className="pergunta-two">
+                <h1>Como posso entrar em contato com o suporte ao cliente?</h1>
+                <p>Você pode nos contatar por e-mail, telefone ou através do chat ao vivo disponível no nosso site.</p>
+             </div>
+             
+             <hr />
+             <div className="pergunta-three">
+                <h1>Vocês oferecem suporte técnico?</h1>
+                <p>Sim, oferecemos suporte técnico para nossos produtos. Você pode entrar em contato com nossa equipe de suporte para assistência.</p>
+             </div>
+             <hr />
+
 
           </div>
 
 
+        </div>
+       
 
 
-        </header>
+
+
 
       </section>
     </div>
