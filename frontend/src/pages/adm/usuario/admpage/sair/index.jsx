@@ -18,6 +18,9 @@ export default function Sair() {
 
   const toggleMenu = () => setExpandir(!expandir);
 
+  const aberto = <img src="../assets/images/adm/admpage/aberto.png"/>
+  const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
+  
   return (
     <div className="mae">
     <div>
@@ -27,7 +30,9 @@ export default function Sair() {
       >
         <button onClick={toggleMenu} className="menu-toggle">
           {}
-          <span>{expandir ? "↩" : "↪"}</span>
+          <span className={expandir ? "aberto-margin" : "fechado-margin"}>
+            {expandir ? aberto : fechado}
+          </span>
         </button>
         <div className="menu-content">
           <div className="expandir">

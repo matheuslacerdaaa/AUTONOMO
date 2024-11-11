@@ -63,6 +63,8 @@ export default function Vendas() {
     buscar();
   }, []);
 
+  const aberto = <img src="../assets/images/adm/admpage/aberto.png"/>
+  const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
   return (
     <div className="mae">
       <div>
@@ -72,7 +74,9 @@ export default function Vendas() {
         >
           <button onClick={toggleMenu} className="menu-toggle">
             { }
-            <span>{expandir ? "↩" : "↪"}</span>
+            <span className={expandir ? "aberto-margin" : "fechado-margin"}>
+            {expandir ? aberto : fechado}
+          </span>
           </button>
           <div className="menu-content">
             <div className="expandir">
@@ -108,7 +112,7 @@ export default function Vendas() {
 
               <div className="left">
 
-                <Link to='/admpage/ajuda'>
+                <Link className="ajuda" to='/admpage/ajuda'>
                   <img src="../assets/images/adm/admpage/ajuda.png" />
                   {expandir && <span>Ajuda</span>}
                 </Link>

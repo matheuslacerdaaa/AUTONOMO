@@ -70,6 +70,10 @@ export default function Inventario() {
     setAtivar(index);
   };
 
+  
+  const aberto = <img src="../assets/images/adm/admpage/aberto.png"/>
+  const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
+
   return (
     <div className="mae">
       <div>
@@ -78,7 +82,9 @@ export default function Inventario() {
           className={`menu ${expandir ? "menu-aberto" : "menu-fechado"}`}
         >
           <button onClick={toggleMenu} className="menu-toggle">
-            <span>{expandir ? "↩" : "↪"}</span>
+          <span className={expandir ? "aberto-margin" : "fechado-margin"}>
+            {expandir ? aberto : fechado}
+          </span>
           </button>
           <div className="menu-content">
             <div className="expandir">

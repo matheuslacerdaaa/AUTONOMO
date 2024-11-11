@@ -40,7 +40,8 @@ export default function Menu() {
   }, []);
 
   
-
+const aberto = <img src="./assets/images/adm/admpage/aberto.png"/>
+const fechado = <img src="./assets/images/adm/admpage/fechado.png"/>
 
   const toggleMenu = () => setExpandir(!expandir);
 
@@ -54,7 +55,9 @@ export default function Menu() {
       >
         <button onClick={toggleMenu} className="menu-toggle">
           {}
-          <span>{expandir ? "↩" : "↪"}</span>
+          <span className={expandir ? "aberto-margin" : "fechado-margin"}>
+            {expandir ? aberto : fechado}
+          </span>
         </button>
         <div className="menu-content">
           <div className="expandir">
@@ -92,7 +95,7 @@ export default function Menu() {
             <div className="left">
 
               <Link to='/admpage/ajuda'>
-                <img src="./assets/images/adm/admpage/ajuda.png" />
+                <img className="ajuda" src="./assets/images/adm/admpage/ajuda.png" />
                 {expandir && <span>Ajuda</span>}              
               </Link>
 
