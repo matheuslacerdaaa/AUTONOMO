@@ -13,6 +13,7 @@ export async function inserirUsuario(pessoa) {
     let info = resposta[0];
     
     return info.insertId;
+    
 }
 
 export async function validarUsuario(pessoa) {
