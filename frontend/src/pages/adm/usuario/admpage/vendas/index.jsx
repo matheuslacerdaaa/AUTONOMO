@@ -34,7 +34,7 @@ export default function Despesas() {
       const url = 'http://localhost:3069/vendas';
       let resp = await axios.post(url, params);
   
-      toast.success('Item adicionado! Id: ' + resp.data.novoId);
+      toast.success('Item adicionado!');
     } catch (error) {
       toast.error('Erro ao adicionar item!'); 
     }
