@@ -110,7 +110,7 @@ export default function Cadastro() {
 
                     <div className="link">
                         <h3>Já tem conta? Faça  <a href=""><Link to='/login '>Login</Link></a></h3>
-                        <hr />
+                  
                     </div>
 
                     
