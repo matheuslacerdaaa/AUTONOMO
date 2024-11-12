@@ -34,7 +34,7 @@
       
       
 
-      .inicio{
+      .inicio {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -44,31 +44,78 @@
         border-radius: 15px;
         border: none;
         text-decoration: none;
-        img{
-          height: 50%;
+      
+        img {
+          height: 60%;
+          margin-right: 18%;
+          transition: opacity 0.3s ease;
+        }
+      
+        p {
+          font-family: 'Poppins', sans-serif;
+          font-size: 110%;
+          margin-top: 2%;
+          color: white;
           margin-right: 15%;
         }
-        p{
+      
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/inicio-preto.png');
+          }
+        }
+      }
+      
+
+      .vendas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 7vh;
+        width: 80%;
+        align-items: center;
+        border-radius: 15px;
+        border: none;
+        text-decoration: none;
+      
+        img {
+          height: 50%;
+          margin-right: 15%;
+          transition: opacity 0.3s ease;
+        }
+      
+        p {
           font-family: 'Poppins', sans-serif;
           font-size: 100%;
           margin-top: 2%;
           color: white;
           margin-right: 8%;
         }
-      }
-
-      .inicio:hover{
-         
-        background-color: #e5b000;
-        cursor: pointer;
-        p{
-          color: #000000;
+      
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/vendas-preto.png');
+          }
         }
       }
 
-      .vendas{
+
+      .despesas {
         display: flex;
-        text-decoration: none;
         flex-direction: row;
         justify-content: center;
         height: 7vh;
@@ -76,31 +123,37 @@
         align-items: center;
         border-radius: 15px;
         border: none;
-        img{
+        text-decoration: none;
+      
+        img {
           height: 50%;
-          margin-right: 15%;
+          margin-right: 8%;
+          transition: opacity 0.3s ease;
         }
-        p{
+      
+        p {
           font-family: 'Poppins', sans-serif;
           font-size: 100%;
           margin-top: 2%;
           color: white;
-          margin-right: 6%;
+          margin-left: 5%;
+        }
+      
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/despesa-preto.png');
+          }
         }
       }
-
-      .vendas:hover{
-         
-        background-color: #e5b000;
-        cursor: pointer;
-        p{
-          color: #000000;
-        }
-      }
-
-      .despesas{
+      .inventario {
         display: flex;
-        text-decoration: none;
         flex-direction: row;
         justify-content: center;
         height: 7vh;
@@ -108,59 +161,43 @@
         align-items: center;
         border-radius: 15px;
         border: none;
-        img{
-          height: 50%;
-         margin-right: 10%;
-        }
-        p{
-          font-family: 'Poppins', sans-serif;
-          font-size: 100%;
-          margin-top: 2%;
-          color: white;
-        }
-      }
-
-      .despesas:hover{
-         
-        background-color: #e5b000;
-        cursor: pointer;
-        p{
-          color: #000000;
-        }
-      }
-      .inventario{
-        display: flex;
         text-decoration: none;
-        flex-direction: row;
-        justify-content: center;
-        height: 7vh;
-        width: 80%;
-        align-items: center;
-        border-radius: 15px;
-        border: none;
-        img{
+      
+        img {
           height: 50%;
-          margin-right: 10%;
+          margin-right: 8%;
+          transition: opacity 0.3s ease;
         }
-        p{
+      
+        p {
           font-family: 'Poppins', sans-serif;
           font-size: 100%;
           margin-top: 2%;
           color: white;
+          margin-left: 5%;
+        }
+      
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/inventario-preto.png');
+          }
         }
       }
     }
-    .inventario:hover{
-         
-      background-color: #e5b000;
-      cursor: pointer;
-      p{
-        color: #000000;
-      }
-    }
+ 
+
+
+
 
     .operacionais{
-     // background-color: aqua;
+   
       width: 100%;
       display: flex;
       align-items: center;
@@ -169,9 +206,11 @@
       gap: 10%;
       position: relative;
       bottom: 5%;
-      .ajuda{
+
+
+
+     .ajuda {
         display: flex;
-        text-decoration: none;
         flex-direction: row;
         justify-content: center;
         height: 7vh;
@@ -179,29 +218,42 @@
         align-items: center;
         border-radius: 15px;
         border: none;
-        img{
-          height: 75%;
-          margin-right: 10%;
-          
+        text-decoration: none;
+      
+        img {
+          height: 80%;
+          margin-right: 11%;
+          transition: opacity 0.3s ease;
         }
-        p{
+      
+        p {
           font-family: 'Poppins', sans-serif;
           font-size: 100%;
           margin-top: 2%;
           color: white;
-          margin-right: 20%;
+          margin-right: 15%;
+        }
+      
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/ajuda-preto.png');
+          }
         }
       }
 
-      .ajuda:hover{
-         
-        background-color: #e5b000;
-        cursor: pointer;
-        p{
-          color: #000000;
-        }
-      }
-      .sair{
+
+
+
+
+
+      .sair {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -211,27 +263,135 @@
         border-radius: 15px;
         border: none;
         text-decoration: none;
-        img{
-          height: 50%;
+      
+        img {
+          height: 60%;
           margin-right: 15%;
+          transition: opacity 0.3s ease;
         }
-        p{
+      
+        p {
           font-family: 'Poppins', sans-serif;
           font-size: 100%;
           margin-top: 2%;
           color: white;
-          margin-right: 20%;
+          margin-right: 18%;
         }
       
-    }
-    .sair:hover{
-         
-      background-color: #e5b000;
-      cursor: pointer;
-      p{
-        color: #000000;
+        &:hover {
+          background-color: #e5b000;
+          cursor: pointer;
+          
+          p{
+            color: black;
+          }
+      
+          img {
+            content: url('../../../../public/assets/images/adm/admpage/sair-preto.png');
+          }
+        }
       }
-    }
     }
       
   }
+
+
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  
+  .popup-content {
+    background: #000000;
+    width: 40%;
+    height: 30vh;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    h2{
+  
+      font-size: 250%;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin-top: 5%;
+      color: #fff;
+
+    }
+
+    
+    .btn{
+      width: 100%;
+      height: 10vh;
+      margin-bottom: 5%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5%;
+
+      a{
+        background-color: #e5b000;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 5vh;
+        border-radius: 12px;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 110%;
+        transition: transform 0.3s ease;
+      }
+
+      a:hover{
+        transform: scale(1.05);
+      }
+
+      
+      button{
+        background-color: #fff;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        height: 5vh;
+        border-radius: 12px;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 110%;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      button:hover{
+        transform: scale(1.05);
+      }
+
+
+
+    }
+
+
+  
+   
+  
+  }
+

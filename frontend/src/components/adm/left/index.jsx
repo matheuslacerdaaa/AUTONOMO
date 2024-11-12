@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
-import { useSpring, animated } from "@react-spring/web";
 import "./index.scss";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 export default function Left() {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
 
   const navigate = useNavigate();
   const [ativar, setAtivar] = useState(null);
@@ -37,14 +41,36 @@ export default function Left() {
 
 
   return (
+
+    
+
+
       <div className="left">
         <div className="logo-left">
            <p id="logo">BURGER'S</p>
         </div>
+
+
+        {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            
+            
+            
+            <h2>Deseja Sair?</h2>
+
+            <div className="btn">
+              <a href="/login">Sim</a>
+              <button onClick={closePopup}>Não</button>
+            </div>
+          </div>
+        </div>
+      )}
+
         
         <div className="controle">
          <Link className="inicio" to='/admpage'>   
-            <img src="../assets/images/adm/admpage/inicio.png" />
+            <img src="../assets/images/adm/admpage/inicio-branco.png" />
             <p>Início</p>
           </Link>
         
@@ -61,7 +87,7 @@ export default function Left() {
           </Link>
 
           <Link className="inventario" to='/admpage/inventario'>
-            <img src="../assets/images/adm/admpage/img5.png"/>
+            <img src="../assets/images/adm/admpage/inventario-branco.png"/>
             <p>Inventário</p>
           </Link>
           
@@ -73,8 +99,9 @@ export default function Left() {
             <img src="../assets/images/adm/admpage/ajuda.png"/>
             <p>Ajuda</p>
           </Link>
-          <Link className="sair" to='/admpage/sair'>
-            <img src="../assets/images/adm/admpage/sair.png"/>
+
+          <Link onClick={openPopup} className="sair">
+            <img src="../assets/images/adm/admpage/sair-branco.png"/>
             <p>Sair</p>
           </Link>
         </div>

@@ -7,7 +7,7 @@ import Vendas from './pages/adm/usuario/admpage/vendas';
 import Despesas from './pages/adm/usuario/admpage/despesas';
 import Inventario from './pages/adm/usuario/admpage/inventario';
 import Ajuda from './pages/adm/usuario/admpage/ajuda';
-import Sair from './pages/adm/usuario/admpage/sair';
+
 
 export default function Navegar(){
 
@@ -23,7 +23,7 @@ export default function Navegar(){
                 <Route path='/admpage/despesas' element={<Despesas/>}/>
                 <Route path='/admpage/inventario' element={<Inventario/>}/>
                 <Route path='/admpage/ajuda' element={<Ajuda/>}/>
-                <Route path='/admpage/sair' element={<Sair/>}/>
+        
 
             </Routes>
         </BrowserRouter>
