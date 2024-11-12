@@ -1,193 +1,208 @@
-.homepage-ajuda{
+.mae{
+
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: row;
+
+
+    .esquerda{
+        width: 18%;
+    }
+
+    .direita{
+        
+
+        width: 82%;
  
- 
-    width: 100%;
+        display: flex;
+        flex-direction: column;
 
-    header{
+        header{
+            width: 100%;
+            h1{
+              font-family: 'Poppins',sans-serif;
+              font-size: 200%;
+              font-weight: 500;
+              color: #1d1d1d;
+            }
+          }
+      
 
-        h1{
+        
 
-            font-family: 'Poopins', sans-serif;
-            font-weight: 300;
-            font-size: 250%;
+
+        .main{
+
+            width: 100%;
+          
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .conteudo{
+
+                width: 75%;
+                height: 75vh;
           
 
-        }  
-    }
 
-    .main{
+                .titulo{
 
-        width: 100%;
-        height: 90%;
-   
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    
+                
+                    height: 8vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 5%;
 
-        h1{
+                    h2{
 
-            color: white;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 170%;
+                        color: #E9A209;
+                    }
+                }
+
+                .um{
+
+                    width: 80%;
+                    height: 19vh;
+                  
+                    border-top: 0.5px solid #1d1d1d;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 5%;
+
+                    .text-field{
+
+
+                     width: 100%;   
+                     height: 15vh;
+                    
+                     display: flex;
+                     justify-content: space-around;
+                     flex-direction: column;
+                    
+
+                     h1{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 200%;
+                     }
+
+                     p{
+
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 300;
+                        font-size: 100%;
+
+                     }
+
+
+                    }
+
+
+                }
+                .dois{
+
+                    width: 80%;
+                    height: 19vh;
+                 
+                    border-top: 0.5px solid #1d1d1d;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 5%;
+
+                    .text-field{
+
+
+                     width: 100%;   
+                     height: 17vh;
+        
+                     display: flex;
+                     justify-content: space-around;
+                     flex-direction: column;
+                    
+
+                     h1{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 200%;
+                     }
+
+                     p{
+
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 300;
+                        font-size: 100%;
+
+                     }
+
+
+                    }
+
+
+                }
+
+                .tres{
+
+                    width: 80%;
+                    height: 19vh;
+          
+                    border-top: 0.5px solid #1d1d1d;
+                    border-bottom: 0.5px solid #1d1d1d;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 5%;
+
+                    .text-field{
+
+
+                     width: 100%;   
+                     height: 15vh;
+                 
+                     display: flex;
+                     justify-content: space-around;
+                     flex-direction: column;
+                    
+
+                     h1{
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 200%;
+                     }
+
+                     p{
+
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 300;
+                        font-size: 100%;
+
+                     }
+
+
+                    }
+
+
+                }
+
+
+
+            }
+          
 
         }
 
-        
-
-        .perguntas{
-
-            width: 90%;
-            height: 80vh;
-
-            margin-top: 5%;
-         
-        
-
-         
-            .text-titulo{
-
-                width: 100%;
-                height: 8vh;
-                display: flex;
-                align-items: center;
-                padding-left: 15%;
-
-                h1{
-
-                    color: #E9A209;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 500;
-                    font-size: 180%;
-                    margin-bottom: 5%;
-
-    
-                }
-
-                
-    
-                
-            }
-
-            hr{
-
-                width: 65%;
-                margin-left: 15%;
-
-            }
-
-            .pergunta-one{
-
-                width: 80%;
-                height: 15vh;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: 15%;
-            
-              
-                gap: 11%; 
-                
-                h1{
 
 
-                    color: black;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 500;
-                    font-size: 180%;
-
-
-                }
-
-                p{
-
-                    
-                    color: #4D4D4D;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 300;
-                    font-size: 100%;
-
-                }
-
-            }
-
-
-
-            .pergunta-two{
-
-                width: 80%;
-                height: 18vh;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: 15%;
-                margin-top: 2%;
-                
-               
-              
-                gap: 9%; 
-
-                  
-                h1{
-
-
-                    color: black;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 500;
-                    font-size: 180%;
-
-
-                }
-
-                p{
-
-                    
-                    color: #4D4D4D;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 300;
-                    font-size: 100%;
-
-                }
-            }
-            .pergunta-three{
-
-                width: 80%;
-                height: 18vh;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: 15%;
-                margin-top: 2%;
-                gap: 11%; 
-            
-
-
-                  
-                h1{
-
-
-                    color: black;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 500;
-                    font-size: 180%;
-
-
-                }
-
-                p{
-
-                    
-                    color: #4D4D4D;
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 300;
-                    font-size: 100%;
-
-                }
-            }
-            
-
-
-        }
-        
     }
+
+
+
 
 }

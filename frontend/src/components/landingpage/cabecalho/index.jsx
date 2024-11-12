@@ -13,7 +13,7 @@ export default function Cabecalho() {
     return (
         <header>
             <nav id="navbar">
-                <p id='logo'>BURGUERS</p>
+                <p id='logo'>BURGUER'S</p>
                 <ul id="nav_list">
                     <li className="nav_item active">
                         <a href="#inicio">Inicio</a>

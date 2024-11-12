@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "@react-spring/web";
 import "./inventario.scss";
-import { Link } from 'react-router-dom';
 import axios from "axios";
 import toast, {Toaster} from "react-hot-toast";
+import Left from "../../../../../components/adm/left";
+
 
 export default function Inventario() {
-  const [expandir, setExpandir] = useState(false);
-  const [ativar, setAtivar] = useState(null);
-  const [inventario, setInventario] = useState([]);
+  const[inventario, setInventario] = useState([])
   const [showPopup, setShowPopup] = useState(false);
   const openPopup = () => setShowPopup(true);
   const closePopup = () => setShowPopup(false);
@@ -18,19 +16,18 @@ export default function Inventario() {
   const[adicionado, setAdicionado] = useState('')
   const[estoque, setEstoque] = useState('')
   const[validade, setValidade] = useState('')
-  const[fornecedor, setFornecedor] = useState('')
   const[status, setStatus] = useState('')
 
   async function inserir() {
     try {
       const params = {
-        "nome": nome,
-        "categoria": categoria,
-        "adicionado": adicionado,
-        "estoque": estoque,
-        "validade": validade,
-        "fornecedor": fornecedor,
-        "status": status
+      
+          "nome": nome,  
+          "categoria": categoria,
+          "adicionado": adicionado,
+          "estoque": estoque,
+          "validade": validade,
+          "status": status
       };
   
       const url = 'http://localhost:3069/inventario';
@@ -41,166 +38,66 @@ export default function Inventario() {
       toast.error('Erro ao adicionar item!'); 
     }
   }
-  
-
-
   async function buscar() {
-      const url = 'http://localhost:3069/inventario';
-      let resp = await axios.get(url);
-      setInventario(resp.data);
-    }
+    const url = 'http://localhost:3069/inventario';
+    let resp = await axios.get(url);
+    setInventario(resp.data);
+  }
 
 
-    useEffect(() => {
-      buscar();
-    }, []);
-
-  const animation = useSpring({
-    width: expandir ? 200 : 60,
-    config: { tension: 250, friction: 60 },
-  });
-
-  const toggleMenu = () => setExpandir(!expandir);
+  useEffect(() => {
+    buscar();
+  }, []);
 
 
-  
 
 
-  const ativarClick = (index) => {
-    setAtivar(index);
-  };
 
-  
-  const aberto = <img src="../assets/images/adm/admpage/aberto.png"/>
-  const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
+
+
 
   return (
     <div className="mae">
-      <div>
-        <animated.div
-          style={animation}
-          className={`menu ${expandir ? "menu-aberto" : "menu-fechado"}`}
-        >
-          <button onClick={toggleMenu} className="menu-toggle">
-          <span className={expandir ? "aberto-margin" : "fechado-margin"}>
-            {expandir ? aberto : fechado}
-          </span>
-          </button>
-          <div className="menu-content">
-            <div className="expandir">
-              <i id="logo">BURGER'S</i>
-              <Link to='/admpage'>
-                <a
-                  href="#"
-                  onClick={() => ativarClick(1)}
-                  className={ativarClick === 1 ? "ativar" : ""}
-                >
-                  <img src="../assets/images/adm/admpage/inicio.png" />
-                  {expandir && <span>Início</span>}
-                </a>
-              </Link>
 
-              <Link to='/admpage/vendas'>
-                <img src="../assets/images/adm/admpage/img2.png" />
-                {expandir && <span>Vendas</span>}
-              </Link>
 
-              <Link to='/admpage/despesas'>
-                <img src="../assets/images/adm/admpage/img3.png" />
-                {expandir && <span>Despesas</span>}
-              </Link>
+    <div className="esquerda">
+      <Left/>
+    </div>
 
-              <Link to='/admpage/inventario'>
-                <img src="../assets/images/adm/admpage/img5.png" />
-                {expandir && <span>Inventário</span>}
-              </Link>
+      <div className="right">
 
-              <div className="left">
-                <Link to='/admpage/ajuda'>
-                  <img src="../assets/images/adm/admpage/ajuda.png" />
-                  {expandir && <span>Ajuda</span>}
-                </Link>
-
-                <Link to='/admpage/sair'>
-                  <img src="../assets/images/adm/admpage/sair.png" />
-                  {expandir && <span>Sair</span>}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </animated.div>
-      </div>
-      <section className="homepage-inventario">
-        <header id="cabecalho">
-          <div className="text">
-            <h1>Inventário</h1>
-          </div>
-
+        
+          <header>
+            <h1>Inventario</h1>
+          </header>
           
-        </header>
-        <div className="btn">
-            <button onClick={openPopup}>+ Add Item</button>
+          <div className="btn">
+            <button onClick={openPopup}>+ㅤAdd Item</button>
           </div>
-
-        <table>
-          <div className="cab-table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Categoria</th>
-              <th>Adicionado</th>
-              <th>Estoque</th>
-              <th>Validade</th>
-              <th>Fornecedor</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          </div>
-          <div className="inf-table">
-          <tbody>
-            {inventario.map(item =>
-              <tr key={item.id}>
-                <td>{item.nome}</td>
-                <td>{item.categoria}</td>
-                <td>{new Date(item.adicionado).toLocaleDateString()}</td>
-                <td>{item.estoque}</td>
-                <td>{new Date(item.validade).toLocaleDateString()}</td>
-                <td>{item.fornecedor}</td>
-                <td>{item.status}</td>
-              </tr>
-            )}
-          </tbody>
-          </div>
-        </table>
-
-        {showPopup && (
+       
+            {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
             <h2>Adicionar Itens</h2>
 
               <div className="text">
-
-
             <label htmlFor="">Nome</label>
             <input type="text" placeholder="digite" value={nome} onChange={e => setNome(e.target.value)} />
 
             <label htmlFor="">Categoria</label>
             <input type="text" placeholder="digite" value={categoria} onChange={e => setCategoria(e.target.value)}/>
 
-            <label htmlFor="">Data  </label>
-            <input type="date" value={adicionado} onChange={e => setAdicionado(e.target.value)}/>
+            <label htmlFor="">Dt. Adicionado</label>
+            <input type="date" placeholder="digite" value={adicionado} onChange={e => setAdicionado(e.target.value)}/>
 
             <label htmlFor="">Qtd. Estoque</label>
             <input type="text" placeholder="digite" value={estoque} onChange={e => setEstoque(e.target.value)}/>
 
-            <label htmlFor="">Data Validade</label>
-            <input type="date"  value={validade} onChange={e => setValidade(e.target.value)} />
-
-            <label htmlFor="">Fornecedor</label>
-            <input type="text" placeholder="digite" value={fornecedor} onChange={e => setFornecedor(e.target.value)}/>
+            <label htmlFor="">Dt. Validade</label>
+            <input type="date" placeholder="digite"  value={validade} onChange={e => setValidade(e.target.value)} />
 
             <label htmlFor="">Status</label>
-            <input type="text" placeholder="digite" value={status} onChange={e => setStatus(e.target.value)} />
+            <input type="text" placeholder="digite" value={status} onChange={e => setStatus(e.target.value)}/>
 
 
               </div>
@@ -214,9 +111,41 @@ export default function Inventario() {
           </div>
         </div>
       )}
-      </section>
 
-      <Toaster/>
+
+        <div className="main">
+    
+          <div className="tabela">
+            <header>
+                   <div className="horario"><p>Nome</p></div>
+                    <div className="preco"><p>Categoria</p></div>
+                    <div className="descricao"><p>Dt. Adicionado</p></div>
+                    <div className="categoria"><p>Qtd. Estoque</p></div>
+                    <div className="responsavel"><p>Dt. Validade</p></div>
+                    <div className="pagamento"><p>Status</p></div>
+            </header>
+
+              <div className="conteudo">
+              {inventario.map(item => (
+              <div key={item.id} className="registro">
+                <div className="horario"><p>{item.nome}</p></div>
+                <div className="preco"><p>{item.categoria}</p></div>
+                <div className="descricao"><p>{new Date(item.adicionado).toLocaleDateString()}</p></div>
+                <div className="categoria"><p>{item.estoque}</p></div>
+                <div className="responsavel"><p>{new Date (item.validade).toLocaleDateString()}</p></div>
+                <div className="pagamento"><p>{item.status}</p></div>
+              </div>
+            ))}
+
+              </div>
+          </div>
+        </div>  
+      </div>
+
+
+  
+    <Toaster/>
     </div>
   );
 }
+

@@ -16,27 +16,34 @@
         justify-content: center;
         animation: mov 3s ease-in-out forwards;
         box-shadow: 2px 5px 10px rgb(117, 117, 117);
-        background-color: white;
-      
-  
- 
+        background-color: #fff;
+        align-items: center;
         border-radius: 30px;
-        width: 70vw;
-        height: 90vh;
+        width: 80%;
+        height: 90%;
     
             .imagem {
                 width: 35%;
-                height: 35vh;
-                margin-top: 250px;
+                height: 50%;
+                //background-color: yellow;
             }
         
             .link{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 8%;
-                margin-right: 20%;
+                //background-color: chartreuse;
+                width: 100%;
+                margin-top: 3%;
+                //gap: 8%;
+                //margin-right: 20%;
+
+                hr{
+                    margin-top: 5%;
+                    width: 30vw;
+                    color: #4F4F4F;
+                }
 
                 a{
                    margin-bottom: 3px;
@@ -46,30 +53,26 @@
                 }
             }
 
-
-
         .inputs {
-
-        
             display: flex;
             flex-direction: column;
-            gap: 20px;
-           
+           // gap: 1%;
+            margin-top: 5%;
+            padding: 15px;
+            height: 100%;
+            //margin-bottom: 5%;
+            width: 50%;
+            //background-color: red;
+            justify-content: center;
             
             
-            
-
-
-            hr{
-                margin-right: 80px;
-                width: 30vw;
-                color: #4F4F4F;
-            }
+          
             .text{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                padding-top: 50px;
+                
+                
                 h2{
                     margin-bottom: 40px;
                 }
@@ -95,15 +98,15 @@
             input {
                
                 border-radius: 62px;
-                width: 30vw;
-                height: 5vh;
+                width: 80%;
+                height: 15%;
                 padding: 5px;
                 font: 400 14px 'lato';
                 border: 1px solid #36363650;
                 outline: none;
                 padding-left: 3%;
                 font-family: 'Poppins', sans-serif;
-       
+                
             }
         }
       
@@ -111,7 +114,9 @@
         .botao-cadastro {
             display: flex;
             align-items: center;
-            margin-left: 6vw;
+            justify-content: center;
+            margin-top: 5%;
+            margin-bottom: 8%;
                 button{
                     width: 20vw;
                     height: 5vh;

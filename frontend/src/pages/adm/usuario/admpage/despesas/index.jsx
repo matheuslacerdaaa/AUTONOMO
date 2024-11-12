@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "@react-spring/web";
 import "./despesas.scss";
-import { Link } from 'react-router-dom';
 import axios from "axios";
 import toast, {Toaster} from "react-hot-toast";
+import Left from "../../../../../components/adm/left";
 
 
 export default function Despesas() {
-  const [expandir, setExpandir] = useState(false);
-  const [ativar, setAtivar] = useState(null);
   const[despesas, setDespesas] = useState([])
   const [showPopup, setShowPopup] = useState(false);
   const openPopup = () => setShowPopup(true);
@@ -53,136 +50,38 @@ export default function Despesas() {
     buscar();
   }, []);
 
-  const ativarClick = (index) => {
-    setAtivar(index);
-  };
-
-  const animation = useSpring({
-    width: expandir ? 200 : 60,
-    config: { tension: 250, friction: 60 },
-  });
-
-  const toggleMenu = () => setExpandir(!expandir);
 
 
-  
-const aberto = <img src="../assets/images/adm/admpage/aberto.png"/>
-const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
+
+
 
 
 
   return (
     <div className="mae">
-    <div>
-      <animated.div
-        style={animation}
-        className={`menu ${expandir ? "menu-aberto" : "menu-fechado"}`}
-      >
-        <button onClick={toggleMenu} className="menu-toggle">
-          {}
-          <span className={expandir ? "aberto-margin" : "fechado-margin"}>
-            {expandir ? aberto : fechado}
-          </span>
-        </button>
-        <div className="menu-content">
-          <div className="expandir">
 
-          <i id="logo">BURGER'S</i>
-          <Link to='/admpage'>
-            <a
-              href="#"
-              onClick={() => ativarClick(1)}
-              className={ativarClick === 1 ? "ativar" : ""}
-            >
-              
-              <img src="../assets/images/adm/admpage/inicio.png" />
-              {expandir && <span>Início</span>}
-              
-            </a>
-            </Link>
 
-            <Link to='/admpage/vendas'>
-              <img src="../assets/images/adm/admpage/img2.png" />
-              {expandir && <span>Vendas</span>}
-            </Link>
-
-            <Link to='/admpage/despesas'>
-              <img src="../assets/images/adm/admpage/img3.png" />
-              {expandir && <span>Despesas</span>}
-            </Link>
-
-            <Link to='/admpage/inventario'>
-              <img src="../assets/images/adm/admpage/img5.png" />
-              {expandir && <span>Inventário</span>}
-            </Link>
-
-            <div className="left">
-
-              <Link to='/admpage/ajuda'>
-                <img src="../assets/images/adm/admpage/ajuda.png" />
-                {expandir && <span>Ajuda</span>}              
-              </Link>
-
-              <Link to='/admpage/sair'>
-                <img src="../assets/images/adm/admpage/sair.png" />
-                {expandir && <span>Sair</span>}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </animated.div>
+    <div className="esquerda">
+      <Left/>
     </div>
-    <section className="homepage-despesas">
-      <header id="cabecalho">
-        <div className="text">
-        <h1>Despesas</h1>
-        </div>
 
+      <div className="right">
 
-        </header>
-
-        <div className="btn">
-            <button onClick={openPopup}>+ Add Item</button>
+        
+          <header>
+            <h1>Despesas</h1>
+          </header>
+          
+          <div className="btn">
+            <button onClick={openPopup}>+ㅤAdd Despesa</button>
           </div>
-        <table>
-          <div className="cab-table">
-              <thead>
-                <tr>
-
-                  <th>Horario</th>
-                  <th>Preco</th>
-                  <th>Descricao</th>
-                  <th>Categoria</th>
-                  <th>Responsavel</th>
-                  <th>Pagamento</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              </div>
-              <div className="inf-table">
-              <tbody>
-                {despesas.map(item => 
-                  <tr key={item.id}>  
-                    <td>{item.horario}</td>
-                    <td>{item.preco}</td>
-                    <td>{(item.descricao)}</td>
-                    <td>{item.categoria}</td>
-                    <td>{(item.responsavel)}</td>
-                    <td>{item.pagamento}</td>
-                    <td>{item.status}</td>
-                  </tr>
-                )}
-              </tbody>
-              </div>
-            </table>
+       
             {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
-            <h2>Adicionar Itens</h2>
+            <h2>Adicionar Despesa</h2>
 
               <div className="text">
-
-
             <label htmlFor="">Horario</label>
             <input type="time" placeholder="digite" value={horario} onChange={e => setHorario(e.target.value)} />
 
@@ -216,15 +115,39 @@ const fechado = <img src="../assets/images/adm/admpage/fechado.png"/>
           </div>
         </div>
       )}
-        
-        
-        
+
+
+        <div className="main">
     
-     
-      
-      
-      
-    </section>
+          <div className="tabela">
+            <header>
+                   <div className="horario"><p>Horario</p></div>
+                    <div className="preco"><p>Preço</p></div>
+                    <div className="descricao"><p>Descrição</p></div>
+                    <div className="categoria"><p>Categoria</p></div>
+                    <div className="responsavel"><p>Responsavel</p></div>
+                    <div className="pagamento"><p>Pagamento</p></div>
+            </header>
+
+              <div className="conteudo">
+              {despesas.map(item => (
+              <div key={item.id} className="registro">
+                <div className="horario"><p>{item.horario}</p></div>
+                <div className="preco"><p>{item.preco}</p></div>
+                <div className="descricao"><p>{item.descricao}</p></div>
+                <div className="categoria"><p>{item.categoria}</p></div>
+                <div className="responsavel"><p>{item.responsavel}</p></div>
+                <div className="pagamento"><p>{item.pagamento}</p></div>
+              </div>
+            ))}
+
+              </div>
+          </div>
+        </div>  
+      </div>
+
+
+  
     <Toaster/>
     </div>
   );
