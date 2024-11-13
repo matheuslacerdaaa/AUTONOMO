@@ -431,7 +431,7 @@
             font-weight: 300;
            }
           }
-          .pagamento{
+          .pagament{
 
           
             width: 17%;
@@ -439,6 +439,7 @@
             display: flex;
             align-items: center;  
             justify-content: center;
+        
 
 
                 
@@ -449,6 +450,20 @@
             font-family: 'Arial',sans-serif;
             font-weight: 300;
            }
+          }
+
+
+          .acoe{
+
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 3%;
+            gap: 3%;
+          
+
           }
         }
 

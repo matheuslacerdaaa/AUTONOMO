@@ -34,7 +34,7 @@ export default function Cadastro() {
             else {
                 const url = `http://localhost:3069/usuario?x-access-token=${token}`;
                 let resp = await axios.post(url, paramsCorpo);
-                toast.success('Cadastrado Id: ' + resp.data.novoId);}
+                toast.success('Cadastrado!!');}
         } 
     }
 
