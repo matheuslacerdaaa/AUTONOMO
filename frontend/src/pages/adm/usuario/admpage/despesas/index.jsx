@@ -105,7 +105,7 @@ export default function Despesas() {
           <h1>Despesas</h1>
         </header>
         <div className="btn">
-          <button onClick={openPopup}>+ㅤAdd Despesa</button>
+          <button onClick={openPopup}>+ㅤAdd Item</button>
         </div>
         {showPopup && (
           <div className="popup-overlay">
@@ -142,7 +142,7 @@ export default function Despesas() {
               <div className="categoria"><p>Categoria</p></div>
               <div className="responsavel"><p>Responsavel</p></div>
               <div className="pagamento"><p>Pagamento</p></div>
-              <div className="acoes"><p>Ações</p></div>
+              <div className="acoes"><p></p></div>
             </header>
             <div className="conteudo">
               {despesas.map(item => (

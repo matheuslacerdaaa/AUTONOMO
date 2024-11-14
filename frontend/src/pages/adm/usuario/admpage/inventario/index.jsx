@@ -110,7 +110,6 @@ export default function Inventario() {
 
 
 
-
   return (
     <div className="mae">
 
@@ -178,7 +177,7 @@ export default function Inventario() {
               <div className="categoria"><p>Qtd. Estoque</p></div>
               <div className="responsavel"><p>Dt. Validade</p></div>
               <div className="pagamento"><p>Status</p></div>
-              <div className="acoes"><p>Acoes</p></div>
+              <div className="acoes"><p></p></div>
             </header>
 
             <div className="conteudo">

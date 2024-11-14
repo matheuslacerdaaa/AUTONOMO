@@ -122,7 +122,7 @@ export default function Despesas() {
           </header>
           
           <div className="btn">
-            <button onClick={openPopup}>+ㅤAdd Venda</button>
+            <button onClick={openPopup}>+ㅤAdd Item</button>
           </div>
        
             {showPopup && (
@@ -172,7 +172,7 @@ export default function Despesas() {
                     <div className="categoria"><p>Quantidade</p></div>
                     <div className="responsavel"><p>Cliente</p></div>
                     <div className="pagamento"><p>Vendedor</p></div>
-                    <div className="acoes"><p>acoes</p></div>
+                    <div className="acoes"><p></p></div>
             </header>
 
               <div className="conteudo">
