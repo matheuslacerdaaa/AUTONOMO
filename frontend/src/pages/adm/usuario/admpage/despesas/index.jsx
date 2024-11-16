@@ -17,19 +17,19 @@ export default function Despesas() {
     limparCampos();
   };
 
-  const [horario, setHorario] = useState('');
-  const [preco, setPreco] = useState('');
+  const [data, setData] = useState('');
   const [descricao, setDescricao] = useState('');
   const [categoria, setCategoria] = useState('');
+  const [valor, setValor] = useState('');
   const [responsavel, setResponsavel] = useState('');
   const [pagamento, setPagamento] = useState('');
 
 
   function limparCampos() {
-    setHorario('');
-    setPreco('');
+    setData('');
     setDescricao('');
     setCategoria('');
+    setValor('');
     setResponsavel('');
     setPagamento('');
 
@@ -38,10 +38,10 @@ export default function Despesas() {
   async function inserir() {
     try {
       const params = {
-        horario,
-        preco,
+        data,
         descricao,
         categoria,
+        valor,
         responsavel,
         pagamento,
    
@@ -81,10 +81,10 @@ export default function Despesas() {
 
   const editar = (item) => {
     setEditingId(item.id); 
-    setHorario(item.horario);
-    setPreco(item.preco);
+    setData(item.data);
     setDescricao(item.descricao);
     setCategoria(item.categoria);
+    setValor(item.valor);
     setResponsavel(item.responsavel);
     setPagamento(item.pagamento);
  
@@ -112,18 +112,18 @@ export default function Despesas() {
             <div className="popup-content">
               <h2>{editingId ? 'Editar Despesa' : 'Adicionar Despesa'}</h2>
               <div className="text">
-                <label>Horario</label>
-                <input type="time" value={horario} onChange={e => setHorario(e.target.value)} />
-                <label>Preço</label>
-                <input type="text" value={preco} onChange={e => setPreco(e.target.value)} />
+                <label>Data</label>
+                <input type="date" min="2024-11-01" max="2024-11-30" value={data} onChange={e => setData(e.target.value)} />
                 <label>Descrição</label>
-                <input type="text" value={descricao} onChange={e => setDescricao(e.target.value)} />
+                <input type="text" placeholder="digite..." value={descricao} onChange={e => setDescricao(e.target.value)} />
                 <label>Categoria</label>
-                <input type="text" value={categoria} onChange={e => setCategoria(e.target.value)} />
+                <input type="text" placeholder="digite..." value={categoria} onChange={e => setCategoria(e.target.value)} />
+                <label>Valor</label>
+                <input type="text" placeholder= 'digite...' value={valor} onChange={e => setValor(e.target.value)} />
                 <label>Responsavel</label>
-                <input type="text" value={responsavel} onChange={e => setResponsavel(e.target.value)} />
-                <label>Pagamento</label>
-                <input type="text" value={pagamento} onChange={e => setPagamento(e.target.value)} />
+                <input type="text" placeholder="digite..." value={responsavel} onChange={e => setResponsavel(e.target.value)} />
+                <label>F. pagamento</label>
+                <input type="text" placeholder="digite..." value={pagamento} onChange={e => setPagamento(e.target.value)} />
               
               </div>
               <div className="btn">
@@ -136,21 +136,21 @@ export default function Despesas() {
         <div className="main">
           <div className="tabela">
             <header>
-              <div className="horario"><p>Horario</p></div>
-              <div className="preco"><p>Preço</p></div>
-              <div className="descricao"><p>Descrição</p></div>
-              <div className="categoria"><p>Categoria</p></div>
+              <div className="horario"><p>Data</p></div>
+              <div className="preco"><p>Descrição</p></div>
+              <div className="descricao"><p>Categoria</p></div>
+              <div className="categoria"><p>Valor</p></div>
               <div className="responsavel"><p>Responsavel</p></div>
-              <div className="pagamento"><p>Pagamento</p></div>
+              <div className="pagamento"><p>F. Pagamento</p></div>
               <div className="acoes"><p></p></div>
             </header>
             <div className="conteudo">
               {despesas.map(item => (
                 <div key={item.id} className="registro">
-                  <div className="horario"><p>{item.horario}</p></div>
-                  <div className="preco"><p>{item.preco}</p></div>
-                  <div className="descricao"><p>{item.descricao}</p></div>
-                  <div className="categoria"><p>{item.categoria}</p></div>
+                 <div className="horario"><p>{item.data.split('-').reverse().join('/')}</p></div>
+                  <div className="preco"><p>{item.descricao}</p></div>
+                  <div className="descricao"><p>{item.categoria}</p></div>
+                  <div className="categoria"><p>{item.valor}</p></div>
                   <div className="responsavel"><p>{item.responsavel}</p></div>
                   <div className="pagamento"><p>{item.pagamento}</p></div>
                   <div className="acoes">

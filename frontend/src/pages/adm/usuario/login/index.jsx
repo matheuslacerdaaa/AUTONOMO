@@ -33,7 +33,7 @@ export default function Login() {
         discordAcess()
     }
     } catch (error) {
-      toast.error('ERRO NA API')
+      toast.error('ERRO')
       discordErroApi()
     }
     

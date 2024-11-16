@@ -19,20 +19,20 @@ export default function Despesas() {
     limparCampos();
   };
 
-  const[horario, setHorario] = useState('')
-  const[preco, setPreco] = useState('')
+  const[data, setData] = useState('')
   const[produto, setProduto] = useState('')
   const[quantidade, setQuantidade] = useState('')
-  const[cliente, setCliente] = useState('')
+  const[valor, setValor] = useState('')
+  const[pagamento, setPagamento] = useState('')
   const[vendedor, setVendedor] = useState('')
 
 
   function limparCampos() {
-    setHorario('');
-    setPreco('');
+    setData('');
     setProduto('');
     setQuantidade('');
-    setCliente('');
+    setValor('');
+    setPagamento('');
     setVendedor('');
 
 
@@ -43,11 +43,11 @@ export default function Despesas() {
     try {
       const params = {
         
-       "horario": horario,
-       "preco": preco,
+       "data": data,
        "produto": produto,
        "quantidade": quantidade,
-       "cliente" : cliente,
+       "valor": valor,
+       "pagamento" : pagamento,
        "vendedor": vendedor
       };
   
@@ -90,11 +90,11 @@ export default function Despesas() {
 
   const editar = (item) => {
     setEditingId(item.id); 
-    setHorario(item.horario);
-    setPreco(item.preco);
-    setProduto(item.produto);  
-    setQuantidade(item.quantidade);
-    setCliente(item.cliente);      
+    setData(item.data);
+    setProduto(item.produto);
+    setQuantidade(item.quantidade);  
+    setValor(item.valor);
+    setPagamento(item.pagamento);      
     setVendedor(item.vendedor);
 
     openPopup();
@@ -131,23 +131,23 @@ export default function Despesas() {
             <h2>Adicionar Venda</h2>
 
               <div className="text">
-            <label htmlFor="">Horario</label>
-            <input type="time" placeholder="digite" value={horario} onChange={e => setHorario(e.target.value)} />
-
-            <label htmlFor="">Preço</label>
-            <input type="text" placeholder="digite" value={preco} onChange={e => setPreco(e.target.value)}/>
+            <label htmlFor="">Data</label>
+            <input type="date" min="2024-11-01" max="2024-11-30" placeholder="digite..." value={data} onChange={e => setData(e.target.value)} />
 
             <label htmlFor="">Produto</label>
-            <input type="text" placeholder="digite" value={produto} onChange={e => setProduto(e.target.value)}/>
+            <input type="text" placeholder="digite..." value={produto} onChange={e => setProduto(e.target.value)}/>
 
             <label htmlFor="">Quantidade</label>
-            <input type="text" placeholder="digite" value={quantidade} onChange={e => setQuantidade(e.target.value)}/>
+            <input type="text" placeholder="digite..." value={quantidade} onChange={e => setQuantidade(e.target.value)}/>
 
-            <label htmlFor="">Cliente</label>
-            <input type="text" placeholder="digite"  value={cliente} onChange={e => setCliente(e.target.value)} />
+            <label htmlFor="">Valor</label>
+            <input type="text" placeholder="digite..." value={valor} onChange={e => setValor(e.target.value)}/>
 
-            <label htmlFor="">Pagamento</label>
-            <input type="text" placeholder="digite" value={vendedor} onChange={e => setVendedor(e.target.value)}/>
+            <label htmlFor="">F. pagamento</label>
+            <input type="text" placeholder="digite..."  value={pagamento} onChange={e => setPagamento(e.target.value)} />
+
+            <label htmlFor="">Vendedor</label>
+            <input type="text" placeholder="digite..." value={vendedor} onChange={e => setVendedor(e.target.value)}/>
 
             </div>
 
@@ -166,11 +166,11 @@ export default function Despesas() {
     
           <div className="tabela">
             <header>
-                   <div className="horario"><p>Horario</p></div>
-                    <div className="preco"><p>Preço</p></div>
-                    <div className="descricao"><p>Produto</p></div>
-                    <div className="categoria"><p>Quantidade</p></div>
-                    <div className="responsavel"><p>Cliente</p></div>
+                   <div className="horario"><p>Data</p></div>
+                    <div className="preco"><p>Produto</p></div>
+                    <div className="descricao"><p>Quantidade</p></div>
+                    <div className="categoria"><p>Valor</p></div>
+                    <div className="responsavel"><p>F. pagamento</p></div>
                     <div className="pagamento"><p>Vendedor</p></div>
                     <div className="acoes"><p></p></div>
             </header>
@@ -178,11 +178,11 @@ export default function Despesas() {
               <div className="conteudo">
               {vendas.map(item => (
               <div key={item.id} className="registro">
-                <div className="horario"><p>{item.horario}</p></div>
-                <div className="preco"><p>{item.preco}</p></div>
-                <div className="descricao"><p>{item.produto}</p></div>
-                <div className="categoria"><p>{item.quantidade}</p></div>
-                <div className="responsavel"><p>{item.cliente}</p></div>
+                <div className="horario"><p>{item.data.split('-').reverse().join('/')}</p></div>
+                <div className="preco"><p>{item.produto}</p></div>
+                <div className="descricao"><p>{item.quantidade}</p></div>
+                <div className="categoria"><p>{item.valor}</p></div>
+                <div className="responsavel"><p>{item.pagamento}</p></div>
                 <div className="pagamento"><p>{item.vendedor}</p></div>
                 <div className="acoes">
                     <FaEdit className="icon" onClick={() => editar(item)} />

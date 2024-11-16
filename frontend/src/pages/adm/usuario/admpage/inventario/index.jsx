@@ -19,21 +19,21 @@ export default function Inventario() {
     limparCampos();
   };
 
-  const [nome, setNome] = useState('')
-  const [categoria, setCategoria] = useState('')
-  const [adicionado, setAdicionado] = useState('')
-  const [estoque, setEstoque] = useState('')
+  const [entrada, setEntrada] = useState('')
+  const [descricao, setDescricao] = useState('')
+  const [nota, setNota] = useState('')
   const [validade, setValidade] = useState('')
-  const [status, setStatus] = useState('')
+  const [quantidade, setQuantidade] = useState('')
+  const [valor, setValor] = useState('')
 
 
   function limparCampos() {
-    setStatus('');
-    setCategoria('');
-    setAdicionado('');
-    setEstoque('');
+    setEntrada('');
+    setDescricao('');
+    setNota('');
     setValidade('');
-    setStatus('');
+    setQuantidade('');
+    setValor('');
 
 
   }
@@ -45,12 +45,12 @@ export default function Inventario() {
     try {
       const params = {
 
-        "nome": nome,
-        "categoria": categoria,
-        "adicionado": adicionado,
-        "estoque": estoque,
+        "entrada": entrada,
+        "descricao": descricao,
+        "nota": nota,
         "validade": validade,
-        "status": status
+        "quantidade": quantidade,
+        "valor": valor
       };
 
        const url = `http://localhost:3069/inventario${editingId ? `/${editingId}` : ''}`;
@@ -89,12 +89,12 @@ export default function Inventario() {
 
   const editar = (item) => {
     setEditingId(item.id); 
-    setNome(item.nome);
-    setCategoria(item.categoria);
-    setAdicionado(item.adicionado);  
-    setEstoque(item.estoque);
-    setValidade(item.validade);      
-    setStatus(item.status);
+    setEntrada(item.entrada);
+    setDescricao(item.descricao);
+    setNota(item.nota);  
+    setValidade(item.validade);
+    setQuantidade(item.quantidade);      
+    setValor(item.valor);
 
     openPopup();
   };
@@ -135,23 +135,26 @@ export default function Inventario() {
               <h2>Adicionar Itens</h2>
 
               <div className="text">
-                <label htmlFor="">Nome</label>
-                <input type="text" placeholder="digite" value={nome} onChange={e => setNome(e.target.value)} />
+                <label htmlFor="">Entrada</label>
+                <input type="date" min="2024-11-01" max="2024-11-30"  placeholder="digite..." value={entrada} onChange={e => setEntrada(e.target.value)} />
 
-                <label htmlFor="">Categoria</label>
-                <input type="text" placeholder="digite" value={categoria} onChange={e => setCategoria(e.target.value)} />
+                <label htmlFor="">Descrição</label>
+                <input type="text" placeholder="digite..." value={descricao} onChange={e => setDescricao(e.target.value)} />
 
-                <label htmlFor="">Dt. Adicionado</label>
-                <input type="date" placeholder="digite" value={adicionado} onChange={e => setAdicionado(e.target.value)} />
+          
 
-                <label htmlFor="">Qtd. Estoque</label>
-                <input type="text" placeholder="digite" value={estoque} onChange={e => setEstoque(e.target.value)} />
+                <label htmlFor="">Nota Fiscal</label>
+                <input type="text" placeholder= 'digite...' value={nota} onChange={e => setNota(e.target.value)}/>
 
-                <label htmlFor="">Dt. Validade</label>
-                <input type="date" placeholder="digite" value={validade} onChange={e => setValidade(e.target.value)} />
 
-                <label htmlFor="">Status</label>
-                <input type="text" placeholder="digite" value={status} onChange={e => setStatus(e.target.value)} />
+                <label htmlFor="">Validade</label>
+                <input type="date" min="2024-11-01" max="2024-11-30" placeholder="digite..." value={validade} onChange={e => setValidade(e.target.value)} />
+
+                <label htmlFor="">Quantidade</label>
+                <input type="text" placeholder="digite..." value={quantidade} onChange={e => setQuantidade(e.target.value)} />
+
+                <label htmlFor="">Valor</label>
+                <input type="text" placeholder="digite..." value={valor} onChange={e => setValor(e.target.value)} />
 
 
               </div>
@@ -171,24 +174,24 @@ export default function Inventario() {
 
           <div className="tabela">
             <header>
-              <div className="horario"><p>Nome</p></div>
-              <div className="preco"><p>Categoria</p></div>
-              <div className="descricao"><p>Dt. Adicionado</p></div>
-              <div className="categoria"><p>Qtd. Estoque</p></div>
-              <div className="responsavel"><p>Dt. Validade</p></div>
-              <div className="pagamento"><p>Status</p></div>
+              <div className="horario"><p>Entrada</p></div>
+              <div className="preco"><p>Descrição</p></div>
+              <div className="descricao"><p>Nota fiscal</p></div>
+              <div className="categoria"><p>Validade</p></div>
+              <div className="responsavel"><p>Quantidade</p></div>
+              <div className="pagamento"><p>Valor</p></div>
               <div className="acoes"><p></p></div>
             </header>
 
             <div className="conteudo">
               {inventario.map(item => (
                 <div key={item.id} className="registro">
-                  <div className="horario"><p>{item.nome}</p></div>
-                  <div className="preco"><p>{item.categoria}</p></div>
-                  <div className="descricao"><p>{new Date(item.adicionado).toLocaleDateString()}</p></div>
-                  <div className="categoria"><p>{item.estoque}</p></div>
-                  <div className="responsavel"><p>{new Date(item.validade).toLocaleDateString()}</p></div>
-                  <div className="pagamento"><p>{item.status}</p></div>
+                 <div className="horario"><p>{item.entrada.split('-').reverse().join('/')}</p></div>
+                  <div className="preco"><p>{item.descricao}</p></div>
+                  <div className="descricao"><p>{item.nota}</p></div>
+                  <div className="categoria"><p>{item.validade.split('-').reverse().join('/')}</p></div>
+                  <div className="responsavel"><p>{item.quantidade}</p></div>
+                  <div className="pagamento"><p>{item.valor}</p></div>
                   <div className="acoes">
                     <FaEdit className="icon" onClick={() => editar(item)} />
                     <FaTrash className="icon" onClick={() => excluir(item.id)} />
