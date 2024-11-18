@@ -32,7 +32,7 @@ export default function Cadastro() {
                         return;
                     }
             else {
-                const url = `http://localhost:3069/usuario?x-access-token=${token}`;
+                const url = `http://4.172.207.208:5001/usuario?x-access-token=${token}`;
                 let resp = await axios.post(url, paramsCorpo);
                 toast.success('Cadastrado!!');}
         } 
@@ -41,7 +41,7 @@ export default function Cadastro() {
     
     async function consultar(token) {
         if (id != undefined) {
-            const url = `http://localhost:3069/cadastro/${id}?x-access-token=${token}`;
+            const url = `http://4.172.207.208:5001/cadastro/${id}?x-access-token=${token}`;
             let resp = await axios.get(url);
             let dados = resp.data;
 

@@ -18,7 +18,7 @@ export default function Menu() {
   const read = async () => {
     const x = localStorage.getItem('USUARIO');
     if (x) {
-      const z = await axios.get(`http://localhost:3069/readToken/${JSON.parse(x).token}`);
+      const z = await axios.get(`http://4.172.207.208:5001/readToken/${JSON.parse(x).token}`);
       setObj(z.data)
     } else {
       navigate('/login');
@@ -38,7 +38,7 @@ export default function Menu() {
 
   async function Buscarprimeira() {
 
-    const url = 'http://localhost:3069/vendasprimeira';
+    const url = 'http://4.172.207.208:5001/vendasprimeira';
     let resp = await axios.get(url);
     setT2(resp.data[0]);
     setPrimeira(Number(t2.total_vendas));
@@ -58,7 +58,7 @@ export default function Menu() {
 
   async function Buscarsegunda() {
 
-    const url = 'http://localhost:3069/vendassegunda';
+    const url = 'http://4.172.207.208:5001/vendassegunda';
     let resp = await axios.get(url);
     setT(resp.data[0]);
     setSegunda((Number(t.total_vendas)));
@@ -77,7 +77,7 @@ export default function Menu() {
 
   async function Buscarterceira() {
 
-    const url = 'http://localhost:3069/vendasterceira';
+    const url = 'http://4.172.207.208:5001/vendasterceira';
     let resp = await axios.get(url);
     setC(resp.data[0]);
     setTerceira((Number(c.total_vendas)));
@@ -96,7 +96,7 @@ export default function Menu() {
 
   async function Buscarquarta() {
 
-    const url = 'http://localhost:3069/vendasquarta';
+    const url = 'http://4.172.207.208:5001/vendasquarta';
     let resp = await axios.get(url);
     setD(resp.data[0]);
     setQuarta((Number(d.total_vendas)));
@@ -118,7 +118,7 @@ export default function Menu() {
 
   async function Buscarprimeirad() {
 
-    const url = 'http://localhost:3069/despesasprimeira';
+    const url = 'http://4.172.207.208:5001/despesasprimeira';
     let resp = await axios.get(url);
     setE(resp.data[0]);
     setPrimeiraD((Number(e.total)));
@@ -136,7 +136,7 @@ export default function Menu() {
 
   async function BuscarsegundaD() {
 
-    const url = 'http://localhost:3069/despesassegunda';
+    const url = 'http://4.172.207.208:5001/despesassegunda';
     let resp = await axios.get(url);
     setF(resp.data[0]);
     setSegundaD((Number(f.total)));
@@ -155,7 +155,7 @@ export default function Menu() {
 
   async function BuscarterceiraD() {
 
-    const url = 'http://localhost:3069/despesasterceira';
+    const url = 'http://4.172.207.208:5001/despesasterceira';
     let resp = await axios.get(url);
     setG(resp.data[0]);
     setTerceiraD((Number(g.total)));
@@ -173,7 +173,7 @@ export default function Menu() {
 
   async function BuscarquartaC() {
 
-    const url = 'http://localhost:3069/despesasquarta';
+    const url = 'http://4.172.207.208:5001/despesasquarta';
     let resp = await axios.get(url);
     setH(resp.data[0]);
     setQuartaD((Number(h.total)));
@@ -189,7 +189,7 @@ export default function Menu() {
   const [primeira1, setPrimeira1] = useState([])
 
   async function buscar1() {
-    const url = 'http://localhost:3069/vendasprimeira';
+    const url = 'http://4.172.207.208:5001/vendasprimeira';
     let resp = await axios.get(url);
     setPrimeira1(resp.data);
   }
@@ -202,7 +202,7 @@ export default function Menu() {
   const [primeira2, setPrimeira2] = useState([])
 
   async function buscar2() {
-    const url = 'http://localhost:3069/vendassegunda';
+    const url = 'http://4.172.207.208:5001/vendassegunda';
     let resp = await axios.get(url);
     setPrimeira2(resp.data);
   }
@@ -216,7 +216,7 @@ export default function Menu() {
   const [primeira3, setPrimeira3] = useState([])
 
   async function buscar3() {
-    const url = 'http://localhost:3069/vendasterceira';
+    const url = 'http://4.172.207.208:5001/vendasterceira';
     let resp = await axios.get(url);
     setPrimeira3(resp.data);
   }
@@ -235,7 +235,7 @@ export default function Menu() {
   const [primeira4, setPrimeira4] = useState([])
 
   async function buscar4() {
-    const url = 'http://localhost:3069/vendasquarta';
+    const url = 'http://4.172.207.208:5001/vendasquarta';
     let resp = await axios.get(url);
     setPrimeira4(resp.data);
   }
@@ -249,7 +249,7 @@ export default function Menu() {
   const [totalbruto, setTotalbruto] = useState([])
 
   async function buscarbruto() {
-    const url = 'http://localhost:3069/totalbruto';
+    const url = 'http://4.172.207.208:5001/totalbruto';
     let resp = await axios.get(url);
     setTotalbruto(resp.data);
   }
@@ -262,7 +262,7 @@ export default function Menu() {
   const [segunda1, setSegunda1] = useState([])
 
   async function buscars1() {
-    const url = 'http://localhost:3069/despesasprimeira';
+    const url = 'http://4.172.207.208:5001/despesasprimeira';
     let resp = await axios.get(url);
     setSegunda1(resp.data);
   }
@@ -276,7 +276,7 @@ export default function Menu() {
   const [segunda2, setSegunda2] = useState([])
 
   async function buscars2() {
-    const url = 'http://localhost:3069/despesassegunda';
+    const url = 'http://4.172.207.208:5001/despesassegunda';
     let resp = await axios.get(url);
     setSegunda2(resp.data);
   }
@@ -289,7 +289,7 @@ export default function Menu() {
   const [segunda3, setSegunda3] = useState([])
 
   async function buscars3() {
-    const url = 'http://localhost:3069/despesasterceira';
+    const url = 'http://4.172.207.208:5001/despesasterceira';
     let resp = await axios.get(url);
     setSegunda3(resp.data);
   }
@@ -304,7 +304,7 @@ export default function Menu() {
   const [segunda4, setSegunda4] = useState([])
 
   async function buscars4() {
-    const url = 'http://localhost:3069/despesasquarta';
+    const url = 'http://4.172.207.208:5001/despesasquarta';
     let resp = await axios.get(url);
     setSegunda4(resp.data);
   }
@@ -318,7 +318,7 @@ export default function Menu() {
   const [totallucro, setTotallucro] = useState([])
 
   async function buscarlucro() {
-    const url = 'http://localhost:3069/total';
+    const url = 'http://4.172.207.208:5001/total';
     let resp = await axios.get(url);
     setTotallucro(resp.data);
   }
