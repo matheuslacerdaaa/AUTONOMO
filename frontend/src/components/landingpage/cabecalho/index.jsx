@@ -28,8 +28,8 @@ export default function Cabecalho() {
                         <a href="#avaliar">Avaliação</a>
                     </li>
                 </ul>
-                <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
-                " className='btn-contato' >Contato</a>
+                <a href="/cadastro
+                " className='btn-contato' >Entrar</a>
                 <button id="mobile-btn" onClick={abrirmenu}>
                     <p className={`fa-solid ${icones}`}></p>
                 </button>
