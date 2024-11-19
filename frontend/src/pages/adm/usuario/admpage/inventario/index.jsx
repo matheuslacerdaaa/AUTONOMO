@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./inventario.scss";
-import axios from "axios";
+
 import toast, { Toaster } from "react-hot-toast";
 import Left from "../../../../../components/adm/left";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import axios from "axios";
 
 
 export default function Inventario() {
@@ -53,7 +54,7 @@ export default function Inventario() {
         "valor": valor
       };
 
-       const url = `http://4.172.207.208:5001/inventario${editingId ? `/${editingId}` : ''}`;
+       const url = `http://localhost:3069/inventario${editingId ? `/${editingId}` : ''}`;
       if (editingId) {
         await axios.put(url, params);
         toast.success('Item atualizado!');
@@ -71,7 +72,7 @@ export default function Inventario() {
 
 
   async function buscar() {
-    const url = 'http://4.172.207.208:5001/inventario';
+    const url = 'http://localhost:3069/inventario';
     let resp = await axios.get(url);
     setInventario(resp.data);
   }
@@ -79,7 +80,7 @@ export default function Inventario() {
 
   async function excluir(id) {
     try {
-      await axios.delete(`http://4.172.207.208:5001/inventario/${id}`);
+      await axios.delete(`http://localhost:3069/inventario/${id}`);
       toast.success('Item excluído!');
       buscar();
     } catch (error) {

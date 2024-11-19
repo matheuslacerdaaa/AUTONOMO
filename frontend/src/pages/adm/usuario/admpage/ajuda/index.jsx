@@ -33,9 +33,9 @@ export default function Ajuda() {
             <div className="um">
 
               <div className="text-field">
-                <h1>Posso devolver ou trocar um produto?</h1>
+                <h1>Como a plataforma funciona?</h1>
 
-                <p>Após a confirmação do envio, você receberá um código de rastreamento por e-mail, que pode ser utilizado no site da transportadora.</p>
+                <p>Você insere os dados financeiros da sua empresa, e nossa ferramenta organiza, analisa e fornece graficos para melhorar a gestão financeira.</p>
               </div>
             </div>
             <div className="dois">
@@ -43,7 +43,7 @@ export default function Ajuda() {
               <div className="text-field">
                 <h1>Como posso entrar em contato?</h1>
 
-                <p>Você pode nos contatar por e-mail, telefone ou através do chat ao vivo disponível no nosso site.</p>
+                <p>Você pode nos contatar por e-mail, telefone ou através do whatsapp.</p>
               </div>
             </div>
             <div className="tres">
@@ -51,7 +51,7 @@ export default function Ajuda() {
               <div className="text-field">
                 <h1>Vocês oferecem suporte técnico?</h1>
 
-                <p>Sim, oferecemos suporte técnico para nossos produtos. Você pode entrar em contato com nossa equipe de suporte para assistência.</p>
+                <p>Sim, nossos especialistas estão prontos para ajudar com dúvidas específicas sobre sua gestão financeira.</p>
               </div>
             </div>
 

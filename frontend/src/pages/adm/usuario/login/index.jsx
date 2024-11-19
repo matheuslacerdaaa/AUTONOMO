@@ -20,7 +20,7 @@ export default function Login() {
         "senha": senha
     }
 
-    const url = `http://4.172.207.208:5001/entrar`
+    const url = `http://localhost:3069/entrar`
     let resp = await axios.post(url, usuario);
 
     if (resp.data.token == 'undefined') {
@@ -33,7 +33,7 @@ export default function Login() {
         discordAcess()
     }
     } catch (error) {
-      toast.error('ERRO')
+      toast.error('ERRO NA API')
       discordErroApi()
     }
     

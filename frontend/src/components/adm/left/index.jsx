@@ -23,7 +23,7 @@ export default function Left() {
   const read = async () => {
     const x = localStorage.getItem('USUARIO');
     if (x) {
-      const z = await axios.get(`http://4.172.207.208:5001/readToken/${JSON.parse(x).token}`); 
+      const z = await axios.get(`http://localhost:3069/readToken/${JSON.parse(x).token}`); 
       setObj(z.data)
     } else {
         navigate('/login');
