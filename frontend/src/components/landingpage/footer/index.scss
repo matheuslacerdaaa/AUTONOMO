@@ -1,0 +1,30 @@
+footer{
+
+    background-color: #ffe8b4;
+  
+    #footer_item{
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 8% 24px 8%;
+      align-items: center;
+    }
+  
+    #coptyright{
+      color: #1d1d1d;
+      font-weight: 500;
+    }
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+  #footer_item{
+  
+  flex-direction: column;
+  gap: 20px;
+  
+  }
+  
+  
+  
+  }

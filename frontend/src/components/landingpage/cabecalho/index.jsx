@@ -53,6 +53,8 @@ export default function Cabecalho() {
                 <a href="https://wa.me/5511947096884?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.
                 " className='btn-contato'>Contato</a>
             </div>
+
+            
         </header>
     );
 }

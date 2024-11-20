@@ -1,0 +1,117 @@
+  
+
+  #inicio{
+
+    display: flex;
+    min-height: 65vh;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    .cta{
+        width: 40%;
+        display: flex;
+        flex-direction: column; 
+        gap: 30px;
+        margin-top: 5%;
+        transform: translateX(-100%);
+        animation: slideIn 1s ease-out forwards;
+
+        .titulo{
+
+            font-size: 220%;
+            color: #1d1d1d;
+        }
+        span{
+            font-size: 110%;
+            color: #e9a209;
+        }
+        .subtitulo{
+            font-size: 100%;
+        }
+        .cta-botao{
+            a{
+                text-decoration: none;
+                color: #1d1d1d;
+            }
+        }
+    }
+
+
+
+
+
+    #banner{
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        width: 70%;
+   
+        
+        img{
+        width: 450%;
+        z-index: 2;
+        left: 15%;
+        top: 3%;
+        position: relative;
+        transform: translateX(-100%);
+        animation: slideInFromRight 1s ease-out forwards;
+
+        }
+ }
+
+    .borda{
+        margin-top: 5%;
+        background-color: #fcf3df;
+        width: 50%;
+        height: 70%;
+        position: absolute;
+        border-radius: 40% 30% 0% 30%;
+        top: 5%;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slideInFromRight 1s ease-out forwards;
+        
+        }
+
+
+
+        
+        @media screen and (max-width: 900px) {
+
+            #inicio{
+
+                height: 100%;
+                padding-top: 0;
+            }
+            #banner{
+                display: none;
+
+                img{
+                    display: none;
+                }
+            }
+
+            .borda{
+
+                display: none;
+
+            }
+
+
+            .cta{
+
+                width: 100%;
+                align-items: center;
+                text-align: center;
+
+            }
+        }
+
+      
+        
+
+}
