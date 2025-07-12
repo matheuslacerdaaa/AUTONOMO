@@ -51,7 +51,7 @@ export default function Despesas() {
        "vendedor": vendedor
       };
   
-      const url = `http://4.172.207.208:5001/vendas${editingId ? `/${editingId}` : ''}`;
+      const url = `http://localhost:3069/vendas${editingId ? `/${editingId}` : ''}`;
       if (editingId) {
         await axios.put(url, params);
         toast.success('Item atualizado!');
@@ -70,7 +70,7 @@ export default function Despesas() {
 
 
   async function buscar() {
-    const url = 'http://4.172.207.208:5001/vendas';
+    const url = 'http://localhost:3069/vendas';
     let resp = await axios.get(url);
     setVendas(resp.data);
   }
@@ -79,7 +79,7 @@ export default function Despesas() {
   
   async function excluir(id) {
     try {
-      await axios.delete(`http://4.172.207.208:5001/vendas/${id}`);
+      await axios.delete(`http://localhost:3069/vendas/${id}`);
       toast.success('Item excluído!');
       buscar();
     } catch (error) {
